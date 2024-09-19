@@ -1,0 +1,32 @@
+﻿@page "/"
+@inject Controllers.ModelController model;
+@inject NavigationManager navman;
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+@code{
+
+  protected override void OnInitialized()
+  {
+    if (model.User == null)
+    {
+      navman.NavigateTo("/login");
+    }
+    else
+    {
+      switch (model.User.UserType)
+      {
+        case 1:
+          navman.NavigateTo("/home/admin");
+          break;
+        case 2:
+          navman.NavigateTo("/home/doctor");
+          break;
+        case 3:
+          navman.NavigateTo("/home/paciente");
+          break;
+      }
+    }
+  }
+}
