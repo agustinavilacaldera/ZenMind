@@ -15,7 +15,7 @@ namespace ZenMind.DAL
             {              
                 SQLiteConnection con = SqlConnection.GetConnection();
 
-                if (PatientDischarge.PatientDischargeId == 0 || PatientDischarge.PatientDischargeId == null)
+                if (PatientDischarge.PatientDischargeId == 0 )
                 {
                     res = con.Insert(PatientDischarge);
                 }

@@ -30,25 +30,25 @@
     <AppXManifest Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-09-19T04:33:28.863</Modified>
+      <Modified>2024-09-21T02:50:50.017</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-09-19T01:26:53.280</Modified>
+      <Modified>2024-09-21T02:27:43.863</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ZenMindMAUIBlazor.runtimeconfig.json">
       <PackagePath>ZenMindMAUIBlazor.runtimeconfig.json</PackagePath>
-      <Modified>2024-09-19T01:17:59.163</Modified>
+      <Modified>2024-09-21T00:44:16.634</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ZenMindMAUIBlazor.dll">
       <PackagePath>ZenMindMAUIBlazor.dll</PackagePath>
-      <Modified>2024-09-19T04:33:27.840</Modified>
+      <Modified>2024-09-21T02:36:47.843</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ZenMindMAUIBlazor.exe</PackagePath>
-      <Modified>2024-09-19T04:33:28.140</Modified>
+      <Modified>2024-09-21T02:36:48.393</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -76,23 +76,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-09-18T23:18:38.332</Modified>
+      <Modified>2024-09-21T00:44:12.286</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-09-18T23:18:38.379</Modified>
+      <Modified>2024-09-21T00:44:12.318</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-09-18T23:18:38.442</Modified>
+      <Modified>2024-09-21T00:44:12.397</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-09-18T23:18:38.521</Modified>
+      <Modified>2024-09-21T00:44:12.443</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-09-18T23:18:38.881</Modified>
+      <Modified>2024-09-21T00:44:12.680</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -100,211 +100,211 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-09-18T23:18:49.434</Modified>
+      <Modified>2024-09-21T00:44:14.279</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.234</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.234</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.234</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.434</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.434</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.434</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.434</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.434</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.434</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.418</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.420</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.402</Modified>
+      <Modified>2024-09-21T00:44:14.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.434</Modified>
+      <Modified>2024-09-21T00:44:14.281</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.434</Modified>
+      <Modified>2024-09-21T00:44:14.281</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.434</Modified>
+      <Modified>2024-09-21T00:44:14.279</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.434</Modified>
+      <Modified>2024-09-21T00:44:14.279</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-09-18T23:18:49.434</Modified>
+      <Modified>2024-09-21T00:44:14.279</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ZenMindMAUIBlazor.deps.json">
       <PackagePath>ZenMindMAUIBlazor.deps.json</PackagePath>
-      <Modified>2024-09-19T01:26:53.044</Modified>
+      <Modified>2024-09-21T02:27:43.307</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -696,11 +696,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\ZenMindMAUIBlazor.styles.css">
       <PackagePath>wwwroot\ZenMindMAUIBlazor.styles.css</PackagePath>
-      <Modified>2024-09-18T23:17:38.737</Modified>
+      <Modified>2024-09-21T00:44:02.517</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\ZenMindMAUIBlazor.bundle.scp.css">
       <PackagePath>wwwroot\ZenMindMAUIBlazor.bundle.scp.css</PackagePath>
-      <Modified>2024-09-18T23:17:38.862</Modified>
+      <Modified>2024-09-21T00:44:02.533</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\Components\Layout\MainLayout.razor.css">
       <PackagePath>Components\Layout\MainLayout.razor.css</PackagePath>

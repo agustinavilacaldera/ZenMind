@@ -1,0 +1,15 @@
+@inject Controllers.ModelController model;
+<p>
+  @nombres
+</p>
+@code{
+  [Parameter]
+  public string UserId{ get; set; }
+
+  string nombres;
+
+  protected override void OnInitialized()
+  {
+    nombres = model.GetNombrePersona(UserId);
+  }
+}

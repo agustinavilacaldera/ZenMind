@@ -1,0 +1,36 @@
+﻿@page "/listaAdministrativos"
+@inject Controllers.ModelController model
+
+<h3>Lista de usuarios</h3>
+
+<button class="btn btn-success" style="width:100%">Agregar Usuario</button>
+@if (listaAdministrativos != null)
+{
+  <div class="row">
+    <div class="col-3">Tipo</div>
+    <div class="col-3">Nombre</div>
+    <div class="col-3">Apellido</div>
+    <div class="col-3">E-mail</div>
+  </div>
+  @foreach (Administrativos a in listaAdministrativos)
+  {
+    <a class="btn btn-outline-primary" href="">
+      <div class="row">
+        <div class="col-3">@a.Id</div>
+        <div class="col-3">@a.Name</div>
+        <div class="col-3">@a.SurName</div>
+        <div class="col-3">@a.Email</div>
+      </div>
+    </a>
+  }
+}
+
+@code {
+
+  List<Administrativos> listaAdministrativos;
+
+  protected override void OnInitialized()
+  {
+    listaAdministrativos = model.ListarAdministrativos();
+  }
+}

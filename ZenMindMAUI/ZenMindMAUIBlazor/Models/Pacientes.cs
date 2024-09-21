@@ -18,6 +18,6 @@ namespace ZenMindMAUIBlazor.Models
     public string Phone { get; set; }
     public DateTime Birthday { get; set; }
     [Indexed]
-    public int UsersId { get; set; }
+    public string UsersId { get; set; }
   }
 }

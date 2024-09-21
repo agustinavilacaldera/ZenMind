@@ -19,6 +19,6 @@ namespace ZenMindMAUIBlazor.Models
     public string Especiality {  get; set; }
     public DateTime Birthday { get; set; }
     [Indexed]
-    public int UsersId { get; set; }
+    public string UsersId { get; set; }
   }
 }

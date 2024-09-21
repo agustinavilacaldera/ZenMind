@@ -17,7 +17,7 @@ namespace ZenMind.DAL
             {              
                 SQLiteConnection con = SqlConnection.GetConnection();
 
-                if (Log.LogId == 0 || Log.LogId == null)
+                if (Log.LogId == 0 )
                 {
                     res = con.Insert(Log);
                 }

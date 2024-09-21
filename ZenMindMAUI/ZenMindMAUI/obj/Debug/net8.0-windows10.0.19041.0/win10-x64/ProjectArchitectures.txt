@@ -1,1 +1,0 @@
-E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUI\ZenMindMAUI.csproj;x64

@@ -32,24 +32,59 @@ build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Account/EditUser.razor]
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Account/FormAdministrator.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XEVkaXRVc2VyLnJhem9y
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XEZvcm1BZG1pbmlzdHJhdG9yLnJhem9y
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Account/Login.razor]
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Account/FormLogin.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XExvZ2luLnJhem9y
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XEZvcm1Mb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Account/Users.razor]
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Account/FormSelectTipoUsuario.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XFVzZXJzLnJhem9y
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XEZvcm1TZWxlY3RUaXBvVXN1YXJpby5yYXpvcg==
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Account/FormUser.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XEZvcm1Vc2VyLnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Account/ItemUsuario.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XEl0ZW1Vc3VhcmlvLnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Account/ListaAdministrativos.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XExpc3RhQWRtaW5pc3RyYXRpdm9zLnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Account/ListaUsuarios.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XExpc3RhVXN1YXJpb3MucmF6b3I=
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Account/NombreUsuario.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XE5vbWJyZVVzdWFyaW8ucmF6b3I=
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 

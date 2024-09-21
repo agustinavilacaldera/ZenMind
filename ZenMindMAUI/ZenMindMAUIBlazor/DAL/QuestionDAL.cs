@@ -14,7 +14,7 @@ namespace ZenMind.DAL
 
             try
             {
-                string query = "";
+                
 
                 SQLiteConnection con = SqlConnection.GetConnection();
 

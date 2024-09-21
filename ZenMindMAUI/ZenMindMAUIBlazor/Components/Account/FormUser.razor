@@ -1,0 +1,43 @@
+﻿@page "/formUser/{tipo:int}"
+@inject Controllers.ModelController model;
+@inject NavigationManager navman;
+
+<h3>Actualizar Usuario</h3>
+<EditForm Model="users" OnSubmit="botonGuardar">
+  <div class="mb-3">
+    <label for="usr" class="form-label">Nombre Usuario</label>
+    <input class="form-control" id="usr" type="text" @bind="@users.UserName" />
+  </div>
+  <div class="mb-3">
+    <label for="pwd" class="form-label">Contraseña</label>
+    <input id="pwd" class="form-control" type="password" @bind="@users.Password" />
+  </div>
+  <button class="btn btn-primary" type="submit">Guardar</button>
+</EditForm>
+
+@code {
+  [Parameter]
+  public int tipo { get; set; }
+  private Users users = new();
+
+  private void botonGuardar()
+  {
+    if (!model.ExisteUsuario(users.UserName))
+    {
+      users.UserType = tipo;
+      model.ActualizarUsuarios(users);
+      switch (tipo)
+      {
+        case 1:
+          navman.NavigateTo($"/formAdministrator/{users.UserName}");
+          break;
+        case 2:
+          navman.NavigateTo($"/formMedico/{users.UserName}");
+          break;
+        case 3:
+          navman.NavigateTo($"/formPaciente/{users.UserName}");
+          break;
+      }
+    }
+  }
+}

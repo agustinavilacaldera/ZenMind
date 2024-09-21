@@ -69,6 +69,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Include="..\ZenMindMAUIBlazor\Components\Account\ItemUsuario.razor" Link="ItemUsuario.razor" />
+	  <None Include="..\ZenMindMAUIBlazor\Components\Account\NombreUsuario.razor" Link="NombreUsuario.razor" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Views\Account\Login.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

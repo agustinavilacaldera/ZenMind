@@ -1,0 +1,1 @@
+E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\ZenMindMAUIBlazor.csproj;x64
