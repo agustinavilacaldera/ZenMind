@@ -1,0 +1,55 @@
+﻿@page "/formTest"
+@page "/formTest/{testId:int}"
+@inject Controllers.ModelController model;
+@inject NavigationManager navman
+
+<h3>Actualizar Test</h3>
+<EditForm Model="test" OnSubmit="botonGuardar">
+  <div class="row">
+    <div class="col">
+      <button style="width:100%" type="button" @onclick="botonCancelar" class="btn btn-danger">Cancelar</button>
+    </div>
+    <div class="col">
+      <button style="width:100%" type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="titulo">Título</label>
+    <input class="form-control" id="titulo" type="text" @bind-value="test.Title" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="descripcion">Descripción</label>
+    <input class="form-control" id="descripcion" type="text" @bind-value="test.Description" />
+  </div>
+</EditForm>
+<ListaQuestion TestId="@test.Id" />
+
+@code {
+  [Parameter]
+  public int testId { get; set; }
+  private Tests test = new();
+  private bool editing = false;
+  protected override void OnInitialized()
+  {
+    test = model.CargarTest(testId);
+    if (test == null)
+    {
+      test = model.NuevoTest();
+      editing = false;
+    }
+    else
+      editing = true;
+  }
+  private void botonGuardar()
+  {
+    model.ActualizarTest(test);
+    navman.NavigateTo("/listaTest");
+  }
+  private void botonCancelar()
+  { 
+    if(!editing)
+      model.BorrarTest(test);
+    navman.NavigateTo("/listaTest");
+  }
+
+}

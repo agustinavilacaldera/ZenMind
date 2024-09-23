@@ -1,0 +1,28 @@
+@inject Controllers.ModelController model;
+<div class="mi-modal-container">
+  <div class="mi-modal">
+    <h3>Seleccionar Pacientes</h3>
+    @if (listaPacientes != null)
+    {
+      
+    }
+    <button @onclick="botonSeleccionar">Seleccionar</button>
+  </div>
+</div>
+
+
+@code {
+  [Parameter]
+  public EventCallback<bool> Showing { get; set; }
+  [Parameter]
+  public int MedicoId { get; set; }
+  private List<Pacientes> listaPacientes;
+  protected override void OnInitialized()
+  {
+    listaPacientes = model.ListarPacientesNoAsignados(MedicoId);
+  }
+  private void botonSeleccionar()
+  {
+    Showing.InvokeAsync(false);
+  }
+}

@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿
+using SQLite;
 using ZenMindMAUIBlazor.Models;
 
 
@@ -9,6 +10,221 @@ internal class ModelController
   public Users User { get; set; }
   public string message { get; set; }
   private SQLiteConnection connection;
+
+  public List<Pacientes> ListarPacientesNoAsignados(int mId)
+  {
+    try
+    {
+      List<MedicoPaciente> lm = ListarMedicoPacientes(mId);
+      List<Pacientes> lpa = new();
+      foreach (MedicoPaciente mp in lm)
+        lpa.Add(CargarPaciente(mp.PacientesId));
+      List<Pacientes> lp = ListarPacientes();
+      return lp.Except(lpa).ToList();
+    }
+    catch { return null; }
+    
+  }
+  public List<Pacientes> ListarPacientes()
+  {
+    try
+    {
+      return (from x in connection.Table<Pacientes>()
+              select x).ToList();
+    }
+    catch { return null; }
+  }
+  public Pacientes CargarPaciente(int pId)
+  {
+    try
+    {
+      return (from x in connection.Table<Pacientes>()
+              where x.Id == pId
+              select x).FirstOrDefault();
+    }
+    catch { return null; }
+  }
+  public List<MedicoPaciente> ListarMedicoPacientes(int mId)
+  {
+    try
+    {
+      return (from x in connection.Table<MedicoPaciente>()
+              where x.MedicosId == mId
+              select x).ToList();
+    }
+    catch { return null; }
+  }
+  public List<Medicos> ListarMedicos()
+  {
+    try
+    {
+      return (from x in connection.Table<Medicos>()
+              select x).ToList();
+    }
+    catch { return null; }
+  }
+  public Medicos CargarMedico(int mId)
+  {
+    try
+    {
+      return (from x in connection.Table<Medicos>()
+              where x.Id == mId
+              select x).FirstOrDefault();
+    }
+    catch { return null; }
+  }
+  public void BorrarQuestion(Questions q)
+  {
+    connection.Delete(q);
+  }
+  public void ActualizarQuestion(Questions q)
+  {
+    if (existeQuestion(q.Id))
+    {
+      connection.InsertOrReplace(q);
+    }
+    else
+    {
+      q.Id = nextQuestion();
+      connection.Insert(q);
+    }
+  }
+  private int nextQuestion()
+  {
+    try
+    {
+      return (from x in connection.Table<Questions>()
+              select x).ToList().Max(x => x.Id) + 1;
+    }
+    catch { return 0; }
+  }
+  private bool existeQuestion(int qId)
+  {
+    if ((from x in connection.Table<Questions>()
+         where x.Id == qId
+         select x).ToList().Count() > 0)
+      return true;
+    return false;
+  }
+  public Questions CargarQuestion(int qId)
+  {
+    try
+    {
+      return (from x in connection.Table<Questions>()
+              where x.Id == qId
+              select x).FirstOrDefault();
+    }
+    catch { return null; }
+  }
+  public List<Questions> ListarQuestion(int tId)
+  {
+    try
+    {
+      return (from x in connection.Table<Questions>()
+              where x.TestsId == tId
+              select x).ToList();
+    }
+    catch { return null; }
+
+  }
+  public void BorrarTest(Tests t)
+  {
+    connection.Delete(t);
+  }
+  public Tests NuevoTest()
+  {
+    Tests t = new Tests();
+    t.Id = nextTest();
+    ActualizarTest(t);
+    return t;
+  }
+  public void ActualizarTest(Tests t)
+  {
+    connection.InsertOrReplace(t);
+  }
+  private int nextTest()
+  {
+    try
+    {
+      return (from x in connection.Table<Tests>()
+              select x).ToList().Max(x => x.Id) + 1;
+    }
+    catch { return 0; }
+  }
+  public Tests CargarTest(int tId)
+  {
+    try
+    {
+      return (from x in connection.Table<Tests>()
+              where x.Id == tId
+              select x).ToList()[0];
+    }
+    catch { return null; }
+  }
+  public void ActualizarPaciente(Pacientes p)
+  {
+    if (existePaciente(p.Id))
+    {
+      connection.InsertOrReplace(p);
+    }
+    else
+    {
+      p.Id = nextPaciente();
+      connection.Insert(p);
+    }
+  }
+  private int nextPaciente()
+  {
+    try
+    {
+      return (from x in connection.Table<Pacientes>()
+              select x).ToList().Max(x => x.Id) + 1;
+    }
+    catch { return 0; }
+  }
+  private bool existePaciente(int id)
+  {
+    if ((from x in connection.Table<Pacientes>()
+         where x.Id == id
+         select x).ToList().Count() > 0)
+      return true;
+    return false;
+  }
+  public void ActualizarMedico(Medicos m)
+  {
+    if (existeMedico(m.Id))
+    {
+      connection.InsertOrReplace(m);
+    }
+    else
+    {
+      m.Id = nextMedico();
+      connection.Insert(m);
+    }
+
+  }
+  private bool existeMedico(int mId)
+  {
+    if ((from x in connection.Table<Medicos>()
+         where x.Id == mId
+         select x).ToList().Count() > 0)
+      return true;
+    return false;
+  }
+  private int nextMedico()
+  {
+    try
+    {
+      return (from x in connection.Table<Medicos>()
+              select x).ToList().Max(x => x.Id) + 1;
+    }
+    catch { return 0; }
+  }
+  public List<Tests> ListarTest()
+  {
+    return (from x in connection.Table<Tests>()
+            select x).ToList();
+  }
   public void ActualizarUsuarios(Users u)
   {
     if (ExisteUsuario(u.UserName))
@@ -210,7 +426,6 @@ internal class ModelController
       return true;
     return false;
   }
-
   public ModelController()
   {
     initDatabase();
@@ -220,7 +435,6 @@ internal class ModelController
     try
     {
       connection = SqlConnection.GetConnection();
-
       connection.CreateTable<Users>();
       connection.CreateTable<TestFillOuts>();
       connection.CreateTable<TestAssignments>();
@@ -231,9 +445,7 @@ internal class ModelController
       connection.CreateTable<Medicos>();
       connection.CreateTable<Administrativos>();
     }
-    catch (Exception ex) { }
-
-
+    catch { }
   }
   public bool Login(Login l)
   {

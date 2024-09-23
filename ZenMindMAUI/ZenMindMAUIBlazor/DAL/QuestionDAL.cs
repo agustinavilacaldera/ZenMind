@@ -18,7 +18,7 @@ namespace ZenMind.DAL
 
                 SQLiteConnection con = SqlConnection.GetConnection();
 
-                if (Question.QuestionId == 0 || Question.QuestionId == null)
+                if (Question.QuestionId == 0 )
                 {
                     res = con.Insert(Question);
                 }

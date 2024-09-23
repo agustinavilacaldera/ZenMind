@@ -1,0 +1,16 @@
+@inject Controllers.ModelController model
+@if (paciente != null)
+{
+  <p>
+    @paciente.SurName @paciente.Name
+  </p>
+}
+@code{
+  [Parameter]
+  public int PacienteId{ get; set; }
+  private Pacientes paciente;
+  protected override void OnInitialized()
+  {
+    paciente = model.CargarPaciente(PacienteId);
+  }
+}

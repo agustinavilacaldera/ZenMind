@@ -1,0 +1,52 @@
+﻿@page "/formQuestion/{TestId:int}/{QuestionId:int}"
+@inject Controllers.ModelController model
+@inject NavigationManager navman
+
+<h3>Editar Pregunta</h3>
+
+<EditForm Model="question" OnSubmit="botonGuardar">
+  <div class="mb-3">
+    <label class="form-label" for="statement">Título</label>
+    <input class="form-control" id="statement" type="text" @bind-value="question.Statement" />
+  </div>
+  <div class="row">
+    <div class="col">
+      <button type="button" class="btn btn-danger" style="width:100%" @onclick="botonCancelar">Cancelar</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-warning" style="width:100%" @onclick="botonEliminar">Eliminar</button>
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-success" style="width:100%">Guardar</button>
+    </div>
+  </div>
+</EditForm>
+
+@code {
+  [Parameter]
+  public int TestId{ get; set; }
+  [Parameter]
+  public int QuestionId{ get; set; }
+  private Questions question = new();
+  protected override void OnInitialized()
+  {
+    question = model.CargarQuestion(QuestionId);
+    if (question == null)
+      question = new();
+  }
+  private void botonGuardar()
+  {
+    question.TestsId = TestId;
+    model.ActualizarQuestion(question);
+    navman.NavigateTo($"/formTest/{TestId}");
+  }
+  private void botonCancelar()
+  {
+    navman.NavigateTo($"/formTest/{TestId}");
+  }
+  private void botonEliminar()
+  {
+    model.BorrarQuestion(question);
+    navman.NavigateTo($"/formTest/{TestId}");
+  }
+}

@@ -11,7 +11,7 @@ namespace ZenMindMAUIBlazor.Models
   {
     [PrimaryKey, AutoIncrement]
     public int Id { get; set; }
-    public DateTime Date { get; set; }
+    public DateTime Date { get; set; }//Fecha en que el paciente debe realizar el test
     [Indexed]
     public int MedicosId { get; set; }
     [Indexed]

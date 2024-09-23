@@ -1,0 +1,61 @@
+﻿@page "/formPaciente/{userName}"
+@inject Controllers.ModelController model
+@inject NavigationManager navman
+
+<h3>Actualizar Paciente</h3>
+
+<EditForm Model="persona" OnSubmit="botonGuardar">
+  <div class="mb-3">
+    <label class="form-label" for="nombre">Nombre</label>
+    <input class="form-control" id="nombre" type="text" @bind-value="persona.Name" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="surname">Apellido</label>
+    <input class="form-control" id="surname" type="text" @bind-value="persona.SurName" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="email">E-mail</label>
+    <input class="form-control" id="email" type="email" @bind-value="persona.Email" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="phone">Teléfono</label>
+    <input class="form-control" id="phone" type="tel" @bind-value="persona.Phone" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="birthday">Fecha Nacimiento</label>
+    <input class="form-control" id="birthday" type="date" @bind-value="persona.Birthday" />
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-primary" type="submit" style="width:100%">Guardar</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-danger" style="width:100%" @onclick="botonCancelar">Cancelar</button>
+    </div>
+  </div>
+
+
+</EditForm>
+
+@code {
+  [Parameter]
+  public string userName { get; set; }
+  private Pacientes persona = new();
+  protected override void OnInitialized()
+  {
+    persona = model.CargarPacientePorUserId(userName);
+    if (persona == null)
+      persona = new();
+  }
+  private void botonGuardar()
+  {
+    persona.UsersId = userName;
+    model.ActualizarPaciente(persona);
+    navman.NavigateTo("/listaUsuarios");
+  }
+  private void botonCancelar()
+  {
+    navman.NavigateTo("/listaUsuarios");
+  }
+
+}

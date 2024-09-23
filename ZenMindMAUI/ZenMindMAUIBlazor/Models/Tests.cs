@@ -10,9 +10,11 @@ namespace ZenMindMAUIBlazor.Models
   internal class Tests
   {
     [PrimaryKey, AutoIncrement]
-    public int Id { get; set; }
+    public int Id { get; set; } = -1;
     public string Title { get; set; }
     public string Description { get; set; }
-    public int UserId { get;set; }
+    public string UserId { get;set; }
+    [Ignore]
+    public List<Questions> Questions { get; set; }
   }
 }

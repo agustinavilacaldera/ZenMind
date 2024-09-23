@@ -14,11 +14,10 @@ namespace ZenMind.DAL
 
             try
             {
-                string query = "";
-
+                
                 SQLiteConnection con = SqlConnection.GetConnection();
 
-                if (UserTest.UserTestId == 0 || UserTest.UserTestId == null)
+                if (UserTest.UserTestId == 0)
                 {
                     res = con.Insert(UserTest);
                 }

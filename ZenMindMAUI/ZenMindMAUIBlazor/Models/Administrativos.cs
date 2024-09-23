@@ -10,7 +10,7 @@ namespace ZenMindMAUIBlazor.Models
   internal class Administrativos
   {
     [PrimaryKey, AutoIncrement]
-    public int Id { get; set; }
+    public int Id { get; set; } = -1;
     public string Name { get; set; }
     public string SurName { get; set; }
     [Unique]

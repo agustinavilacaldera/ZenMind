@@ -1,0 +1,30 @@
+@inject Controllers.ModelController model
+@inject NavigationManager navman
+<div class="row">
+  <div class="col">
+    <button class="btn btn-success" style="width:100%" @onclick="botonAgregar">Agregar Pregunta</button>
+  </div>
+</div>
+@if (listaQuestion != null)
+{
+  <div class="list-group">
+    @foreach (Questions questions in listaQuestion)
+    {
+      <ItemQuestion QuestionId="@questions.Id" />
+    }
+  </div>
+  
+}
+@code{
+  [Parameter]
+  public int TestId{ get; set; }
+  private List<Questions> listaQuestion;
+  protected override void OnInitialized()
+  {
+    listaQuestion = model.ListarQuestion(TestId);
+  }
+  private void botonAgregar()
+  {
+    navman.NavigateTo($"/formQuestion/{TestId}/-1");
+  }
+}

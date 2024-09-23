@@ -1,0 +1,48 @@
+﻿@page "/listaPacientes/{MedicoId:int}"
+@inject Controllers.ModelController model
+
+<h3>Lista Pacientes</h3>
+<br />
+@if (medico != null)
+{
+  <p>@medico.SurName @medico.Name</p>
+}
+<div class="row">
+  <div class="col">
+    <button class="btn btn-primary" style="width:100%" @onclick="botonAgregarPaciente">Agregar Paciente</button>
+  </div>
+</div>
+
+@if (listaPacientes != null)
+{
+  @foreach(MedicoPaciente mp in listaPacientes)
+  {
+    <ItemPaciente PacienteId="@mp.PacientesId" />
+  }
+}
+@if (showSelect)
+{
+  <SelectPaciente MedicoId="@MedicoId" Showing="mostrarSelect" />
+}
+
+
+@code {
+  [Parameter]
+  public int MedicoId{ get; set; }
+  private List<MedicoPaciente> listaPacientes;
+  private Medicos medico;
+  private bool showSelect = false;
+  protected override void OnInitialized()
+  {
+    medico = model.CargarMedico(MedicoId);
+    listaPacientes = model.ListarMedicoPacientes(MedicoId);
+  }
+  private void botonAgregarPaciente()
+  {
+    showSelect = true;
+  }
+  private void mostrarSelect(bool s)
+  {
+    showSelect = false;
+  }
+}

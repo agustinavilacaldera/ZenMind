@@ -1,0 +1,17 @@
+@inject Controllers.ModelController model
+
+@if (listaMedicos != null)
+{
+  @foreach(Medicos medico in listaMedicos)
+  {
+    <ItemMedico MedicoId="@medico.Id"/>
+  }
+}
+
+@code{
+  private List<Medicos> listaMedicos;
+  protected override void OnInitialized()
+  {
+    listaMedicos = model.ListarMedicos();
+  }
+}

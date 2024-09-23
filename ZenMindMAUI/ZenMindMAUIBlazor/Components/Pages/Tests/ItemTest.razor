@@ -1,0 +1,23 @@
+@inject Controllers.ModelController model
+@if(test!=null){
+  <a href="@link" class="list-group-item list-group-item-action">
+    <div class="row">
+      <div class="col-2">@test.Id</div>
+      <div class="col-10">
+        @test.Title
+      </div>
+    </div>
+  </a>
+}
+
+@code{
+  [Parameter]
+  public int TestId{ get; set; }
+  private Tests test;
+  private string link;
+  protected override void OnInitialized()
+  {
+    test=model.CargarTest(TestId);
+    link = "/formTest/" + TestId;
+  }
+}

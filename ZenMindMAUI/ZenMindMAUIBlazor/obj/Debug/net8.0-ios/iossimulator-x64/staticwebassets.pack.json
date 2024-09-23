@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Users\\agust\\Documents\\GitHub\\ZenMind\\ZenMindMAUI\\ZenMindMAUIBlazor\\obj\\Debug\\net8.0-ios\\iossimulator-x64\\scopedcss\\bundle\\ZenMindMAUIBlazor.styles.css",
+      "PackagePath": "staticwebassets\\ZenMindMAUIBlazor.styles.css"
+    },
+    {
+      "Id": "E:\\Users\\agust\\Documents\\GitHub\\ZenMind\\ZenMindMAUI\\ZenMindMAUIBlazor\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "E:\\Users\\agust\\Documents\\GitHub\\ZenMind\\ZenMindMAUI\\ZenMindMAUIBlazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\Users\\agust\\Documents\\GitHub\\ZenMind\\ZenMindMAUI\\ZenMindMAUIBlazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\Users\\agust\\Documents\\GitHub\\ZenMind\\ZenMindMAUI\\ZenMindMAUIBlazor\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "E:\\Users\\agust\\Documents\\GitHub\\ZenMind\\ZenMindMAUI\\ZenMindMAUIBlazor\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.ZenMindMAUIBlazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.build.ZenMindMAUIBlazor.props",
+      "PackagePath": "build\\ZenMindMAUIBlazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.buildMultiTargeting.ZenMindMAUIBlazor.props",
+      "PackagePath": "buildMultiTargeting\\ZenMindMAUIBlazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-ios\\iossimulator-x64\\staticwebassets\\msbuild.buildTransitive.ZenMindMAUIBlazor.props",
+      "PackagePath": "buildTransitive\\ZenMindMAUIBlazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

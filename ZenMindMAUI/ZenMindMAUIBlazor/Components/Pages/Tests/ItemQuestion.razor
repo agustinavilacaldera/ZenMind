@@ -1,0 +1,19 @@
+@inject Controllers.ModelController model
+@if (question != null)
+{
+  <a href="@link" class="list-group-item list-group-item-action">
+    <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>@question.Statement
+  </a>
+}
+
+@code{
+  [Parameter]
+  public int QuestionId{ get; set; }
+  private Questions question;
+  private string link;
+  protected override void OnInitialized()
+  {
+    question = model.CargarQuestion(QuestionId);
+    link = $"/formQuestion/{question.TestsId}/{QuestionId}";
+  }
+}

@@ -10,7 +10,7 @@ namespace ZenMindMAUIBlazor.Models
   internal class MedicoPaciente
   {
     [PrimaryKey, AutoIncrement]
-    public int Id { get; set; }
+    public int Id { get; set; } = -1;
     [Indexed]
     public int MedicosId { get; set; }
     [Indexed]
