@@ -2,13 +2,16 @@
 
 @if (listaMedicos != null)
 {
-  @foreach(Medicos medico in listaMedicos)
-  {
-    <ItemMedico MedicoId="@medico.Id"/>
-  }
+  <div class="list-group">
+    @foreach (Medicos medico in listaMedicos)
+    {
+      <ItemMedico MedicoId="@medico.Id" />
+    }
+  </div>
+
 }
 
-@code{
+@code {
   private List<Medicos> listaMedicos;
   protected override void OnInitialized()
   {

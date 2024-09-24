@@ -56,4 +56,16 @@ dkms.conf
 /bin
 /bin/debug
 
-/.vs
+/.vs/
+/ProjectEvaluation/
+*.vsidx
+ZenMindMAUI/.vs/ProjectEvaluation/
+ZenMindMAUI/.vs/ProjectEvaluation/zenmindmaui.projects.v9.bin
+ZenMindMAUI/ZenMindMAUIBlazor/bin/Debug/net8.0-android/com.companyname.zenmindmauiblazor-Signed.apk
+ZenMindMAUI/.vs/ProjectEvaluation/zenmindmaui.metadata.v9.bin
+ZenMindMAUI/.vs/ZenMindMAUI/v17/.futdcache.v2
+ZenMindMAUI/.vs/ZenMindMAUI/v17/.suo
+ZenMindMAUI/.vs/ZenMindMAUI/v17/DocumentLayout.backup.json
+ZenMindMAUI/.vs/ZenMindMAUI/v17/DocumentLayout.json
+ZenMindMAUI/.vs/ProjectEvaluation/zenmindmaui.strings.v9.bin
+

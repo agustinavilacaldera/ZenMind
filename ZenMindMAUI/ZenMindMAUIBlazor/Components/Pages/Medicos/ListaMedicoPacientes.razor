@@ -15,23 +15,41 @@
 
 @if (listaPacientes != null)
 {
-  @foreach(MedicoPaciente mp in listaPacientes)
-  {
-    <ItemPaciente PacienteId="@mp.PacientesId" />
-  }
+  <div class="list-group">
+    <div class="list-group-item">
+      <div class="row">
+        <div class="col-2">Id</div>
+        <div class="col-10">Nombres</div>
+      </div>
+    </div>
+    @foreach (MedicoPaciente mp in listaPacientes)
+    {
+      <button class="list-group-item list-group-item-action" @onclick="()=>botonSelectItem(mp)">
+        <ItemPaciente PacienteId="@mp.PacientesId" />
+      </button>
+
+    }
+  </div>
+
 }
 @if (showSelect)
 {
   <SelectPaciente MedicoId="@MedicoId" Showing="mostrarSelect" />
 }
-
+@if (showRemover)
+{
+  <YesNotModal Mensaje="@mensaje" Respuesta="obtenerRespuesta"></YesNotModal>
+}
 
 @code {
   [Parameter]
-  public int MedicoId{ get; set; }
+  public int MedicoId { get; set; }
   private List<MedicoPaciente> listaPacientes;
   private Medicos medico;
   private bool showSelect = false;
+  private bool showRemover = false;
+  private string mensaje;
+
   protected override void OnInitialized()
   {
     medico = model.CargarMedico(MedicoId);
@@ -44,5 +62,27 @@
   private void mostrarSelect(bool s)
   {
     showSelect = false;
+    refreshList();
+
+  }
+  private void obtenerRespuesta(bool r)
+  {
+    if (r)
+    {
+      model.
+      refreshList();
+    }
+    showRemover = false;
+  }
+  private void refreshList()
+  {
+    listaPacientes = model.ListarMedicoPacientes(MedicoId);
+    StateHasChanged();
+  }
+  private void botonSelectItem(MedicoPaciente mp)
+  {
+    Pacientes pacientes = model.CargarPaciente(mp.PacientesId);
+    mensaje = "Desea desvincular a " + pacientes.SurName + " " + pacientes.Name;
+    showRemover = true;
   }
 }

@@ -1,9 +1,10 @@
 @inject Controllers.ModelController model
-<div class="nav-item px-3">
-  <NavLink class="nav-link" href="@link">
+
+  <a href="@link" class="list-group-item list-group-item-action">
     <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>@medico.SurName @medico.Name
-  </NavLink>
-</div>
+  </a>
+
+
 @code{
   [Parameter]
   public int MedicoId{ get; set; }

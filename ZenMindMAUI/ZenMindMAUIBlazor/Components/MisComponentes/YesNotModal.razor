@@ -1,0 +1,37 @@
+﻿<div class="mi-modal-container">
+  <div class="mi-modal-dialogo">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col">
+          <h5>
+            @Mensaje
+          </h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-success" style="width:100%" @onclick="botonSi">Sí</button>
+        </div>
+        <div class="col">
+          <button class="btn btn-danger" style="width:100%" @onclick="botonNo">No</button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+@code {
+  [Parameter]
+  public string Mensaje{ get; set; }
+  [Parameter]
+  public EventCallback<bool> Respuesta{ get; set; }
+  private void botonSi()
+  {
+    Respuesta.InvokeAsync(true);
+  }
+  private void botonNo()
+  {
+    Respuesta.InvokeAsync(false);
+  }
+}

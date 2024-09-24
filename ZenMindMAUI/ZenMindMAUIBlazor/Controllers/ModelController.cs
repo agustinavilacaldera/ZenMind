@@ -11,19 +11,57 @@ internal class ModelController
   public string message { get; set; }
   private SQLiteConnection connection;
 
+  public void RemoverMedicoPaciente(MedicoPaciente mp)
+  {
+    connection.Delete(mp);
+  }
+  public void ActualizarMedicoPaciente(MedicoPaciente mp)
+  {
+
+    if (existeMedicoPaciente(mp.Id))
+    {
+      connection.InsertOrReplace(mp);
+    }
+    else
+    {
+      mp.Id = nextMedicoPaciente();
+      connection.InsertOrReplace(mp);
+    }
+
+  }
+  private bool existeMedicoPaciente(int id)
+  {
+    if ((from x in connection.Table<Pacientes>()
+         where x.Id == id
+         select x).ToList().Count() > 0)
+      return true;
+    return false;
+  }
+  private int nextMedicoPaciente()
+  {
+    try
+    {
+      return (from x in connection.Table<MedicoPaciente>()
+              select x).ToList().Max(x => x.Id) + 1;
+    }
+    catch { return 0; }
+  }
   public List<Pacientes> ListarPacientesNoAsignados(int mId)
   {
     try
     {
       List<MedicoPaciente> lm = ListarMedicoPacientes(mId);
-      List<Pacientes> lpa = new();
-      foreach (MedicoPaciente mp in lm)
-        lpa.Add(CargarPaciente(mp.PacientesId));
       List<Pacientes> lp = ListarPacientes();
-      return lp.Except(lpa).ToList();
+      List<Pacientes> r = new();
+      foreach (Pacientes p in lp)
+      {
+        if(!lm.Exists(x=>x.PacientesId == p.Id))
+          r.Add(p);
+      }
+      return r;
     }
     catch { return null; }
-    
+
   }
   public List<Pacientes> ListarPacientes()
   {

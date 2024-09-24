@@ -101,8 +101,15 @@ h1:focus {
 
 .mi-modal {
   background-color: azure;
-  border: 1px;
+  border: 1px solid black;
   padding:5px;
   width:90%;
   min-height:90%;
+}
+mi-modal-dialogo {
+  background-color:azure;
+  border: 1px solid black;
+  padding:10px;
+  width: 20%; /*auto*/
+  min-height:auto;
 }
