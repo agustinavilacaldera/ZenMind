@@ -1,24 +1,14 @@
 ﻿@page "/listaUsuarios"
 @inject Controllers.ModelController model;
 
-<div class="row">
-  <div class="col-10">
-    <h3>Lista de Usuarios</h3>
-  </div>
-  <div class="col-2">
-    <a style="width:100%" class="btn btn-outline-danger" href="/">
-      <p>
-        Atrás
-      </p>
-    </a>
-  </div>
-</div>
+<TituloPagina Titulo="Lista Usuarios" href="/"/>
+<br />
 <div class="row">
   <a class="btn btn-success" style="width:100%" href="/selectTipoUsuario">Agregar Usuario</a>
 </div>
 @if (listaUsuarios != null)
 {
-  <div class="list-group-item list-group-item-action">
+  <div class="list-group-item">
     <div class="row">
       <div class="col-2">Id</div>
       <div class="col-7">Nombre Usuario</div>

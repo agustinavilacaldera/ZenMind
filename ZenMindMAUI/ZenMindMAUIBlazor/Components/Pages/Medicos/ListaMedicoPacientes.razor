@@ -1,12 +1,16 @@
 ﻿@page "/listaPacientes/{MedicoId:int}"
 @inject Controllers.ModelController model
 
-<h3>Lista Pacientes</h3>
-<br />
+<TituloPagina Titulo="Lista Pacientes" href="/asignacionPacientes"/>
+
 @if (medico != null)
 {
-  <p>@medico.SurName @medico.Name</p>
+  <div class="mb-3">
+    <label for="nombreMedico" class="form-label">Médico:</label>
+    <input type="email" class="form-control" id="nombreMedico" readonly @bind="nombreMedico">
+  </div>
 }
+
 <div class="row">
   <div class="col">
     <button class="btn btn-primary" style="width:100%" @onclick="botonAgregarPaciente">Agregar Paciente</button>
@@ -45,14 +49,17 @@
   [Parameter]
   public int MedicoId { get; set; }
   private List<MedicoPaciente> listaPacientes;
+  private MedicoPaciente medicoPaciente;
   private Medicos medico;
   private bool showSelect = false;
   private bool showRemover = false;
   private string mensaje;
+  private string nombreMedico;
 
   protected override void OnInitialized()
   {
     medico = model.CargarMedico(MedicoId);
+    nombreMedico = medico.SurName + " " + medico.Name;
     listaPacientes = model.ListarMedicoPacientes(MedicoId);
   }
   private void botonAgregarPaciente()
@@ -69,9 +76,10 @@
   {
     if (r)
     {
-      model.
+      model.RemoverMedicoPaciente(medicoPaciente);
       refreshList();
     }
+    medicoPaciente = null;
     showRemover = false;
   }
   private void refreshList()
@@ -82,6 +90,7 @@
   private void botonSelectItem(MedicoPaciente mp)
   {
     Pacientes pacientes = model.CargarPaciente(mp.PacientesId);
+    medicoPaciente = mp;
     mensaje = "Desea desvincular a " + pacientes.SurName + " " + pacientes.Name;
     showRemover = true;
   }

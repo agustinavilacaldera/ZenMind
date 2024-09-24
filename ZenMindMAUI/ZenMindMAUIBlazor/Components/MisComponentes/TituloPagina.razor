@@ -1,0 +1,16 @@
+﻿<div class="row">
+  <div class="col-9">
+    <h3>@Titulo</h3>
+  </div>
+  <div class="col-3">
+    <a class="btn btn-danger" href="@href" style="width:100%">Regresar</a>
+  </div>
+</div>
+
+
+@code {
+  [Parameter]
+  public string Titulo{get;set;}
+  [Parameter]
+  public string href{ get; set; }
+}
