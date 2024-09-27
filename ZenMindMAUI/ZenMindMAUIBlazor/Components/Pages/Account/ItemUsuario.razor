@@ -8,18 +8,7 @@
         <NombreUsuario UserId="@user.UserName" />
       </div>
       <div class="col-3">
-        @switch (user.UserType)
-        {
-          case 1:
-            Administrativo
-            break;
-          case 2:
-            Medico
-            break;
-          case 3:
-            Paciente
-            break;
-        }
+        @tipoUsuario
       </div>
     </div>
   </a>
@@ -38,6 +27,7 @@
 
   private Users user;
   private string link;
+  private string tipoUsuario;
   private int idUser;
   protected override void OnInitialized()
   {
@@ -46,12 +36,15 @@
     switch (user.UserType)
     {
       case 1:
+        tipoUsuario = "Administrador";
         link = "/formAdministrator/" + user.UserName;
         break;
       case 2:
+      tipoUsuario = "Medico";
         link = "/formMedico/" + user.UserName;
         break;
       case 3:
+      tipoUsuario = "Paciente";
         link = "/formPaciente/" + user.UserName;
         break;
     }

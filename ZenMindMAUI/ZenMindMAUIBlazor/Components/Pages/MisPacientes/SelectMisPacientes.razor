@@ -1,0 +1,49 @@
+@inject Controllers.ModelController model;
+<div class="mi-modal-container">
+  <div class="mi-modal">
+    <div class="row">
+      <div class="col-9">
+        <h3>Seleccionar Pacientes</h3>
+      </div>
+      <div class="col-3">
+        <button class="btn btn-danger" style="width:100%" @onclick="botonCancelar">Cancelar</button>
+      </div>
+    </div>
+    <ListaMedicoPaciente MedicoId="MedicoId" SelectedItem="botonSeleccionar" />
+    @* <div class="list-group">
+      @foreach (Pacientes p in listaPacientes)
+      {
+        <button type="button" class="list-group-item list-group-item-action" @onclick="()=>botonSeleccionar(p.Id)">
+          <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>@p.SurName @p.Name
+        </button>
+      }
+    </div> *@
+  </div>
+</div>
+
+
+@code {
+  [Parameter]
+  public EventCallback<bool> Showing { get; set; }
+  [Parameter]
+  public EventCallback<int> SelectedMedicoPaciente{ get; set; }
+  [Parameter]
+  public int MedicoId { get; set; }
+  private List<MedicoPaciente> listaPacientes;
+  protected override void OnInitialized()
+  {
+    listaPacientes = model.ListarMedicoPacientes(MedicoId);
+  }
+  private void botonSeleccionar(int mpId)
+  {
+    SelectedMedicoPaciente.InvokeAsync(mpId);
+    Showing.InvokeAsync(false);
+    
+    // model.ActualizarMedicoPaciente(medicoPaciente);
+    
+  }
+  private void botonCancelar()
+  {
+    Showing.InvokeAsync(false);
+  }
+}

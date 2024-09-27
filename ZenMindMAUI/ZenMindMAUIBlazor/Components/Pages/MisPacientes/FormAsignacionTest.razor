@@ -1,0 +1,65 @@
+﻿@page "/asignacionTest/{taId:int}"
+@inject NavigationManager navman
+@inject Controllers.ModelController model
+
+<TituloPagina Titulo="Edicion Asignacion de Test" href="asignarTest" />
+
+<EditForm Model="testAssignments" OnSubmit="actualizarTestAssignment">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Paciente" aria-label="Paciente" aria-describedby="button-addon2" readonly @bind="nombrePaciente" />
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2" @onclick="selectPaciente">Select</button>
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="fecha">Fecha</label>
+    <input class="form-control" id="fecha" type="date" @bind-value="testAssignments.Date" />
+  </div>
+  <button type="submit" class="btn btn-success" style="width:100%">Guardar</button>
+</EditForm>
+
+@if (showSelectPaciente)
+{
+  <SelectMisPacientes MedicoId="medicos.Id" Showing="showSelect" SelectedMedicoPaciente="selectedMedicoPaciente" />
+}
+
+@code {
+  [Parameter]
+  public int taId { get; set; }
+  private TestAssignments testAssignments;
+  private bool showSelectPaciente = false;
+  private Medicos medicos;
+  private Pacientes pacientes;
+  private string nombrePaciente="";
+  protected override void OnInitialized()
+  {
+    medicos = model.CargarMedicoPorUserId(model.User.UserName);
+    testAssignments = model.CargarTestAssignment(taId);
+    if (testAssignments != null)
+    {
+      pacientes = model.CargarPaciente(testAssignments.PacientesId);
+      nombrePaciente = pacientes.SurName + " " + pacientes.Name;
+    }
+    else
+      testAssignments = new();
+    testAssignments.MedicosId = medicos.Id;
+  }
+  private void actualizarTestAssignment()
+  {
+    testAssignments.PacientesId = pacientes.Id;
+    
+    model.ActualizarTestAssignment(testAssignments);
+    navman.NavigateTo("asignarTest");
+  }
+  private void selectPaciente()
+  {
+    showSelectPaciente = true;
+  }
+  private void showSelect(bool s)
+  {
+    showSelectPaciente = s;
+  }
+  private void selectedMedicoPaciente(int mpId)
+  {
+    pacientes = model.CargarPaciente(model.CargarMedicoPaciente(mpId).PacientesId);
+    nombrePaciente = pacientes.SurName + " " + pacientes.Name;
+  }
+}

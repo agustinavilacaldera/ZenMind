@@ -1,0 +1,21 @@
+﻿@inject Controllers.ModelController model
+@inject NavigationManager navman
+<div class="row">
+  <div class="col-9">
+    <h3>@Titulo</h3>
+  </div>
+  <div class="col-3">
+    <button class="btn btn-danger" style="width:100%" @onclick="botonLogout">Logout</button>
+  </div>
+</div>
+
+@code {
+  [Parameter]
+  public string Titulo{ get; set; }
+  private void botonLogout()
+  {
+    model.User = null;
+    navman.NavigateTo("/");
+  }
+
+}

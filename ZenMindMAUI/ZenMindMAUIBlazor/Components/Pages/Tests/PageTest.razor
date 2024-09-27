@@ -1,0 +1,21 @@
+﻿@page "/listaTest"
+@inject Controllers.ModelController model
+@inject NavigationManager navman
+
+<TituloPagina Titulo="Lista de Tests" href="/" />
+
+<div class="row">
+  <a class="btn btn-success" style="width:100%" href="/formTest/-1">Agregar Test</a>
+</div>
+<ListaTest SelectedItem="selectedItem"/>
+
+@code {
+  private List<Tests> listaTest;
+
+  
+  protected void selectedItem(int i)
+  {
+    navman.NavigateTo($"/formTest/{i}");
+  }
+
+}

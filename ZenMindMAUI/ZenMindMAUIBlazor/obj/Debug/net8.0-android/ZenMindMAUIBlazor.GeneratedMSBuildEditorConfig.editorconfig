@@ -43,6 +43,13 @@ build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNaXNDb21wb25lbnRlc1xU
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/MisComponentes/TituloPaginaPrincipal.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNaXNDb21wb25lbnRlc1xUaXR1bG9QYWdpbmFQcmluY2lwYWwucmF6b3I=
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/MisComponentes/YesNotModal.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
@@ -127,6 +134,13 @@ build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbi5yYXpv
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/Doctor.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xEb2N0b3IucmF6b3I=
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
@@ -155,10 +169,10 @@ build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZWRpY29zXEl0
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/Medicos/ListaMedicoPacientes.razor]
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/Medicos/ListaMedicoPaciente.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZWRpY29zXExpc3RhTWVkaWNvUGFjaWVudGVzLnJhem9y
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZWRpY29zXExpc3RhTWVkaWNvUGFjaWVudGUucmF6b3I=
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
@@ -176,10 +190,59 @@ build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZWRpY29zXFBh
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/Medicos/SelectPaciente.razor]
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/Medicos/PageMedicoPacientes.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZWRpY29zXFNlbGVjdFBhY2llbnRlLnJhem9y
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZWRpY29zXFBhZ2VNZWRpY29QYWNpZW50ZXMucmF6b3I=
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/Medicos/SelectPacienteNoAsignados.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZWRpY29zXFNlbGVjdFBhY2llbnRlTm9Bc2lnbmFkb3MucmF6b3I=
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/MisPacientes/FormAsignacionTest.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNaXNQYWNpZW50ZXNcRm9ybUFzaWduYWNpb25UZXN0LnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/MisPacientes/ItemTestAssignment.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNaXNQYWNpZW50ZXNcSXRlbVRlc3RBc3NpZ25tZW50LnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/MisPacientes/ListaTestAsignaciones.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNaXNQYWNpZW50ZXNcTGlzdGFUZXN0QXNpZ25hY2lvbmVzLnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/MisPacientes/PageAsignarTest.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNaXNQYWNpZW50ZXNcUGFnZUFzaWduYXJUZXN0LnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/MisPacientes/PageMisPacientes.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNaXNQYWNpZW50ZXNcUGFnZU1pc1BhY2llbnRlcy5yYXpvcg==
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/MisPacientes/SelectMisPacientes.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNaXNQYWNpZW50ZXNcU2VsZWN0TWlzUGFjaWVudGVzLnJhem9y
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
@@ -222,6 +285,13 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUZXN0c1xMaXN0YVRlc3QucmF6b3I=
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/Tests/PageTest.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUZXN0c1xQYWdlVGVzdC5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 

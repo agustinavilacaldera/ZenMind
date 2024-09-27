@@ -1,23 +1,29 @@
 @inject Controllers.ModelController model
 @if(test!=null){
-  <a href="@link" class="list-group-item list-group-item-action">
+  <button class="list-group-item list-group-item-action" @onclick="botonSelect">
     <div class="row">
       <div class="col-2">@test.Id</div>
       <div class="col-10">
         @test.Title
       </div>
     </div>
-  </a>
+  </button>
 }
 
 @code{
   [Parameter]
   public int TestId{ get; set; }
+  [Parameter]
+  public EventCallback<int> SelectedTest { get; set; }
   private Tests test;
   private string link;
   protected override void OnInitialized()
   {
     test=model.CargarTest(TestId);
     link = "/formTest/" + TestId;
+  }
+  private void botonSelect()
+  {
+    SelectedTest.InvokeAsync(TestId);
   }
 }

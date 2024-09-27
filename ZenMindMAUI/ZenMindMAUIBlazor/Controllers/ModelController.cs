@@ -1,5 +1,6 @@
 ﻿
 using SQLite;
+using System.Security.Cryptography;
 using ZenMindMAUIBlazor.Models;
 
 
@@ -11,13 +12,71 @@ internal class ModelController
   public string message { get; set; }
   private SQLiteConnection connection;
 
+  public void ActualizarTestAssignment(TestAssignments ta)
+  {
+    if (existeTestAssignment(ta.Id))
+    {
+      connection.InsertOrReplace(ta);
+    }
+    else
+    {
+      ta.Id = nextTestAssignment();
+      connection.InsertOrReplace(ta);
+    }
+  }
+  private int nextTestAssignment()
+  {
+    try
+    {
+      return (from x in connection.Table<TestAssignments>()
+              select x).ToList().Max(x => x.Id) + 1;
+    }
+    catch { return 0; }
+  }
+  private bool existeTestAssignment(int id)
+  {
+    if ((from x in connection.Table<TestAssignments>()
+         where x.Id == id
+         select x).ToList().Count() > 0)
+      return true;
+    return false;
+  }
+  public TestAssignments CargarTestAssignment(int taId)
+  {
+    try
+    {
+      return (from x in connection.Table<TestAssignments>()
+              where x.Id == taId
+              select x).FirstOrDefault();
+    }
+    catch { return null; }
+  }
+  public List<TestAssignments> ListarTestAssignmentByMedico(int mId)
+  {
+    try
+    {
+      return (from x in connection.Table<TestAssignments>()
+              where x.MedicosId == mId
+              select x).ToList();
+    }
+    catch { return null; }
+  }
+  public MedicoPaciente CargarMedicoPaciente(int mpId)
+  {
+    try
+    {
+      return (from x in connection.Table<MedicoPaciente>()
+              where x.Id == mpId
+              select x).FirstOrDefault();
+    }
+    catch { return null; }
+  }
   public void RemoverMedicoPaciente(MedicoPaciente mp)
   {
     connection.Delete(mp);
   }
   public void ActualizarMedicoPaciente(MedicoPaciente mp)
   {
-
     if (existeMedicoPaciente(mp.Id))
     {
       connection.InsertOrReplace(mp);

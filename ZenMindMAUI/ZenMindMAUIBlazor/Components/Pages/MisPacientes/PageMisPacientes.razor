@@ -1,0 +1,14 @@
+﻿@inject Controllers.ModelController model;
+@page "/misPacientes"
+
+<TituloPagina Titulo="Mis Pacientes" href="/home/doctor" />
+
+<ListaMedicoPaciente MedicoId="medicos.Id"/>
+@code {
+  private Medicos medicos;
+  protected override void OnInitialized()
+  {
+    medicos = model.CargarMedicoPorUserId(model.User.UserName);
+  }
+
+}

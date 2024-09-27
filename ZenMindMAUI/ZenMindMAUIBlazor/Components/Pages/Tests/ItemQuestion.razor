@@ -1,9 +1,9 @@
 @inject Controllers.ModelController model
 @if (question != null)
 {
-  <a href="@link" class="list-group-item list-group-item-action">
+  <button class="list-group-item list-group-item-action" @onclick="selectItem">
     <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>@question.Statement
-  </a>
+  </button>
 }
 
 @code{
@@ -11,9 +11,15 @@
   public int QuestionId{ get; set; }
   private Questions question;
   private string link;
+  [Parameter]
+  public EventCallback<int> SelectedItem{ get; set; }
   protected override void OnInitialized()
   {
     question = model.CargarQuestion(QuestionId);
     link = $"/formQuestion/{question.TestsId}/{QuestionId}";
+  }
+  private void selectItem()
+  {
+    SelectedItem.InvokeAsync(question.Id);
   }
 }

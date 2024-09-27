@@ -22,7 +22,13 @@
     <input class="form-control" id="descripcion" type="text" @bind-value="test.Description" />
   </div>
 </EditForm>
-<ListaQuestion TestId="@test.Id" />
+
+<div class="row">
+  <div class="col">
+    <button class="btn btn-success" style="width:100%" @onclick="botonAgregar">Agregar Pregunta</button>
+  </div>
+</div>
+<ListaQuestion TestId="@test.Id" SelectedQuestion="selectQuestion"/>
 
 @code {
   [Parameter]
@@ -51,5 +57,12 @@
       model.BorrarTest(test);
     navman.NavigateTo("/listaTest");
   }
-
+  private void botonAgregar()
+  {
+    navman.NavigateTo($"/formQuestion/{test.Id}/-1");
+  }
+  private void selectQuestion(int qId)
+  {
+    navman.NavigateTo($"/formQuestion/{testId}/{qId}");
+  }
 }
