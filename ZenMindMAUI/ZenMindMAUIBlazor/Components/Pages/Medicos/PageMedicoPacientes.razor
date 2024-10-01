@@ -17,7 +17,7 @@
   </div>
 </div>
 
-<ListaMedicoPaciente MedicoId="MedicoId" MedicoPacienteId="selectedItem" />
+<ListaMedicoPaciente MedicoId="MedicoId" SelectedItem="selectedItem" />
 
 
 @if (showSelect)
@@ -32,19 +32,17 @@
 @code {
   [Parameter]
   public int MedicoId { get; set; }
-  private List<MedicoPaciente> listaPacientes;
   private MedicoPaciente medicoPaciente;
   private Medicos medico;
   private bool showSelect = false;
   private bool showRemover = false;
-  private string mensaje;
+  private string mensaje="";
   private string nombreMedico;
 
   protected override void OnInitialized()
   {
     medico = model.CargarMedico(MedicoId);
     nombreMedico = medico.SurName + " " + medico.Name;
-    listaPacientes = model.ListarMedicoPacientes(MedicoId);
   }
   private void botonAgregarPaciente()
   {
@@ -68,7 +66,6 @@
   }
   private void refreshList()
   {
-    listaPacientes = model.ListarMedicoPacientes(MedicoId);
     StateHasChanged();
   }
   private void botonSelectItem(MedicoPaciente mp)

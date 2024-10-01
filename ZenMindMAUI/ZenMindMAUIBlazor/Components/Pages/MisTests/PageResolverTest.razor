@@ -1,0 +1,40 @@
+﻿@page "/resolverTest/{TestAssignmentId:int}"
+@inject Controllers.ModelController model
+@inject NavigationManager navman
+
+<TituloPagina Titulo="Resolver Test" href="/misTests" />
+
+@tests.Title
+<br />
+@pregunta.Statement
+<br />
+<OpcionesRespuesta />
+<button @onclick="siguientePregunta">Siguiente Pregunta</button>
+
+
+@code {
+  [Parameter]
+  public int TestAssignmentId { get; set; }
+  private TestAssignments testAssignments;
+  private Tests tests;
+  private List<Questions> listaPreguntas;
+  private int idx = 0;
+  private Questions pregunta;
+  protected override void OnInitialized()
+  {
+    testAssignments = model.CargarTestAssignment(TestAssignmentId);
+    tests = model.CargarTest(testAssignments.TestId);
+    listaPreguntas = model.ListarQuestionPorTest(tests.Id);
+    pregunta = model.CargarQuestion(listaPreguntas[idx].Id);
+  }
+  private void siguientePregunta()
+  {
+    idx++;
+    if (idx >= listaPreguntas.Count)
+    {
+      navman.NavigateTo("/misTests");
+    }
+    else
+      pregunta = model.CargarQuestion(listaPreguntas[idx].Id);
+  }
+}

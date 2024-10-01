@@ -15,6 +15,9 @@ namespace ZenMindMAUIBlazor.Models
     [Indexed]
     public int MedicosId { get; set; }
     [Indexed]
+    public int TestId { get; set; }
+    [Indexed]
     public int PacientesId { get; set; }
+    public bool Respondido { get; set; }=false;
   }
 }

@@ -28,13 +28,19 @@
     <button class="btn btn-success" style="width:100%" @onclick="botonAgregar">Agregar Pregunta</button>
   </div>
 </div>
-<ListaQuestion TestId="@test.Id" SelectedQuestion="selectQuestion"/>
+<ListaQuestion TestId="@test.Id" SelectedQuestion="selectQuestion" />
+
+@if (eliminar)
+{
+  <YesNotModal Mensaje="Eliminar test también?" Respuesta="miRespuesta" />
+}
 
 @code {
   [Parameter]
   public int testId { get; set; }
   private Tests test = new();
   private bool editing = false;
+  private bool eliminar = false;
   protected override void OnInitialized()
   {
     test = model.CargarTest(testId);
@@ -52,17 +58,22 @@
     navman.NavigateTo("/listaTest");
   }
   private void botonCancelar()
-  { 
-    if(!editing)
-      model.BorrarTest(test);
-    navman.NavigateTo("/listaTest");
+  {
+    eliminar = true;
   }
   private void botonAgregar()
   {
+    model.ActualizarTest(test);
     navman.NavigateTo($"/formQuestion/{test.Id}/-1");
   }
   private void selectQuestion(int qId)
   {
     navman.NavigateTo($"/formQuestion/{testId}/{qId}");
+  }
+  private void miRespuesta(bool r)
+  {
+    if (r)
+      model.BorrarTest(test);
+    navman.NavigateTo("/listaTest");
   }
 }

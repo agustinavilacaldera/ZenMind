@@ -19,7 +19,7 @@
   public EventCallback<int> SelectedQuestion{ get; set; }
   protected override void OnInitialized()
   {
-    listaQuestion = model.ListarQuestion(TestId);
+    listaQuestion = model.ListarQuestionPorTest(TestId);
   }
   private void selectQuestion(int qId)
   {

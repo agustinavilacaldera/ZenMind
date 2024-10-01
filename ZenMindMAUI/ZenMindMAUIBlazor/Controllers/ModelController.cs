@@ -12,6 +12,16 @@ internal class ModelController
   public string message { get; set; }
   private SQLiteConnection connection;
 
+  public List<TestAssignments> ListarTestAssignmentNoResueltosPorPaciente(int pId)
+  {
+    try
+    {
+      return (from x in connection.Table<TestAssignments>()
+              where x.Date >= DateTime.Today && !x.Respondido
+              select x).ToList();
+    }
+    catch { return null; }
+  }
   public void ActualizarTestAssignment(TestAssignments ta)
   {
     if (existeTestAssignment(ta.Id))
@@ -51,12 +61,12 @@ internal class ModelController
     }
     catch { return null; }
   }
-  public List<TestAssignments> ListarTestAssignmentByMedico(int mId)
+  public List<TestAssignments> ListarTestAssignmentByMedicoNoRespondido(int mId)
   {
     try
     {
       return (from x in connection.Table<TestAssignments>()
-              where x.MedicosId == mId
+              where x.MedicosId == mId && !x.Respondido
               select x).ToList();
     }
     catch { return null; }
@@ -114,7 +124,7 @@ internal class ModelController
       List<Pacientes> r = new();
       foreach (Pacientes p in lp)
       {
-        if(!lm.Exists(x=>x.PacientesId == p.Id))
+        if (!lm.Exists(x => x.PacientesId == p.Id))
           r.Add(p);
       }
       return r;
@@ -213,7 +223,7 @@ internal class ModelController
     }
     catch { return null; }
   }
-  public List<Questions> ListarQuestion(int tId)
+  public List<Questions> ListarQuestionPorTest(int tId)
   {
     try
     {

@@ -25,7 +25,7 @@
   public EventCallback<int> SelectedTestAssignment{ get; set; }
   protected override void OnInitialized()
   {
-    listaTestAssignment = model.ListarTestAssignmentByMedico(MedicoId);
+    listaTestAssignment = model.ListarTestAssignmentByMedicoNoRespondido(MedicoId);
   }
   private void selectTestAssignment(int taId)
   {

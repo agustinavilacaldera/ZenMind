@@ -6,8 +6,8 @@ namespace ZenMindMAUIBlazor.Models
   {
     [PrimaryKey, AutoIncrement]
     public int Id { get; set; }
-    public int PacienteId { get; set; }
-    public int TestId { get; set; }
+    [Indexed]
+    public int TestAssignmentId { get; set; }
     [Indexed]
     public int QuestionsId { get; set; }
     public int Answer { get; set; }

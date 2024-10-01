@@ -1,7 +1,5 @@
-﻿
-
-@inject Controllers.ModelController model
-@if (listaPacientes != null)
+﻿@inject Controllers.ModelController model
+@if (listaMedicoPacientes != null)
 {
   <div class="list-group">
     <div class="list-group-item">
@@ -10,7 +8,7 @@
         <div class="col-10">Nombres</div>
       </div>
     </div>
-    @foreach (MedicoPaciente mp in listaPacientes)
+    @foreach (MedicoPaciente mp in listaMedicoPacientes)
     {
       <button class="list-group-item list-group-item-action" @onclick="()=>botonSelectItem(mp)">
         <ItemPaciente PacienteId="@mp.PacientesId" />
@@ -22,13 +20,13 @@
 
 @code {
   [Parameter]
-  public int MedicoId{get;set;}
-  private List<MedicoPaciente> listaPacientes;
+  public int MedicoId { get; set; }
+  private List<MedicoPaciente> listaMedicoPacientes;
   [Parameter]
-  public EventCallback<int> SelectedItem{ get; set; }
+  public EventCallback<int> SelectedItem { get; set; }
   protected override void OnInitialized()
   {
-    listaPacientes = model.ListarMedicoPacientes(MedicoId);
+    listaMedicoPacientes = model.ListarMedicoPacientes(MedicoId);
   }
   private void botonSelectItem(MedicoPaciente mp)
   {

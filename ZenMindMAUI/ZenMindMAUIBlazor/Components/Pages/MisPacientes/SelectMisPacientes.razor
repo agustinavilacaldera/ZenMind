@@ -10,14 +10,6 @@
       </div>
     </div>
     <ListaMedicoPaciente MedicoId="MedicoId" SelectedItem="botonSeleccionar" />
-    @* <div class="list-group">
-      @foreach (Pacientes p in listaPacientes)
-      {
-        <button type="button" class="list-group-item list-group-item-action" @onclick="()=>botonSeleccionar(p.Id)">
-          <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span>@p.SurName @p.Name
-        </button>
-      }
-    </div> *@
   </div>
 </div>
 
@@ -29,10 +21,10 @@
   public EventCallback<int> SelectedMedicoPaciente{ get; set; }
   [Parameter]
   public int MedicoId { get; set; }
-  private List<MedicoPaciente> listaPacientes;
+  //private List<MedicoPaciente> listaPacientes;
   protected override void OnInitialized()
   {
-    listaPacientes = model.ListarMedicoPacientes(MedicoId);
+    //listaPacientes = model.ListarMedicoPacientes(MedicoId);
   }
   private void botonSeleccionar(int mpId)
   {
@@ -40,7 +32,6 @@
     Showing.InvokeAsync(false);
     
     // model.ActualizarMedicoPaciente(medicoPaciente);
-    
   }
   private void botonCancelar()
   {

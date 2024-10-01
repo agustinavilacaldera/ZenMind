@@ -1,0 +1,27 @@
+@inject Controllers.ModelController model
+
+<button class="list-group-item list-group-item-action" @onclick="botonItem">
+  <div class="row">
+    <div class="col-2">@testAssignments.Id</div>
+    <div class="col-2">@testAssignments.Date.ToShortDateString()</div>
+    <div class="col-8">Título</div>
+  </div>
+</button>
+
+@code{
+  [Parameter]
+  public int TestAssignmentId{ get; set; }
+  private TestAssignments testAssignments;
+  [Parameter]
+  public EventCallback<int> SelectedTestAssignment{ get; set; }
+  private Tests tests;
+  protected override void OnInitialized()
+  {
+    testAssignments = model.CargarTestAssignment(TestAssignmentId);
+    //tests=model.CargarTest(testAssignments.t)
+  }
+  private void botonItem()
+  {
+    SelectedTestAssignment.InvokeAsync(TestAssignmentId);
+  }
+}

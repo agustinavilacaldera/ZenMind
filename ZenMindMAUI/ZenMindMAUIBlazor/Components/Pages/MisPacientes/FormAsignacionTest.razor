@@ -9,6 +9,10 @@
     <input type="text" class="form-control" placeholder="Paciente" aria-label="Paciente" aria-describedby="button-addon2" readonly @bind="nombrePaciente" />
     <button class="btn btn-outline-secondary" type="button" id="button-addon2" @onclick="selectPaciente">Select</button>
   </div>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Test" aria-label="Test" aria-describedby="button-addon3" readonly @bind="tests.Title" />
+    <button class="btn btn-outline-secondary" type="button" id="button-addon3" @onclick="selectTest">Select</button>
+  </div>
   <div class="mb-3">
     <label class="form-label" for="fecha">Fecha</label>
     <input class="form-control" id="fecha" type="date" @bind-value="testAssignments.Date" />
@@ -18,7 +22,11 @@
 
 @if (showSelectPaciente)
 {
-  <SelectMisPacientes MedicoId="medicos.Id" Showing="showSelect" SelectedMedicoPaciente="selectedMedicoPaciente" />
+  <SelectMisPacientes MedicoId="medicos.Id" Showing="hideSelectPaciente" SelectedMedicoPaciente="selectedMedicoPaciente" />
+}
+@if (showSelectTest)
+{
+  <SelectTest Showing="hideSelectTest" SelectItem="selectedTest" />
 }
 
 @code {
@@ -26,9 +34,11 @@
   public int taId { get; set; }
   private TestAssignments testAssignments;
   private bool showSelectPaciente = false;
+  private bool showSelectTest = false;
   private Medicos medicos;
   private Pacientes pacientes;
-  private string nombrePaciente="";
+  private Tests tests;
+  private string nombrePaciente = "";
   protected override void OnInitialized()
   {
     medicos = model.CargarMedicoPorUserId(model.User.UserName);
@@ -37,15 +47,20 @@
     {
       pacientes = model.CargarPaciente(testAssignments.PacientesId);
       nombrePaciente = pacientes.SurName + " " + pacientes.Name;
+      tests = model.CargarTest(testAssignments.TestId);
     }
     else
+    {
       testAssignments = new();
+      tests = new();
+    }
+    
     testAssignments.MedicosId = medicos.Id;
   }
   private void actualizarTestAssignment()
   {
     testAssignments.PacientesId = pacientes.Id;
-    
+    testAssignments.TestId = tests.Id;
     model.ActualizarTestAssignment(testAssignments);
     navman.NavigateTo("asignarTest");
   }
@@ -53,7 +68,7 @@
   {
     showSelectPaciente = true;
   }
-  private void showSelect(bool s)
+  private void hideSelectPaciente(bool s)
   {
     showSelectPaciente = s;
   }
@@ -61,5 +76,17 @@
   {
     pacientes = model.CargarPaciente(model.CargarMedicoPaciente(mpId).PacientesId);
     nombrePaciente = pacientes.SurName + " " + pacientes.Name;
+  }
+  private void selectTest()
+  {
+    showSelectTest = true;
+  }
+  private void hideSelectTest(bool t)
+  {
+    showSelectTest = t;
+  }
+  private void selectedTest(int tId)
+  {
+    tests = model.CargarTest(tId);
   }
 }

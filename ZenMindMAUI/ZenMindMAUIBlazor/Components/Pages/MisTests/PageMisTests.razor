@@ -1,0 +1,20 @@
+﻿@page "/misTests"
+@inject Controllers.ModelController model
+@inject NavigationManager navman
+
+<TituloPagina Titulo="Mis Test para responder" href="/"/>
+
+<ListaTestPorResolver PacienteId="paciente.Id" SelectedItem="selectItem" />
+
+@code {
+  private Pacientes paciente;
+
+  protected override void OnInitialized()
+  {
+    paciente = model.CargarPacientePorUserId(model.User.UserName);
+  }
+  private void selectItem(int taId)
+  {
+    navman.NavigateTo($"/resolverTest/{taId}");
+  }
+}
