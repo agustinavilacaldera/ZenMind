@@ -1,0 +1,20 @@
+@inject Controllers.ModelController model
+@if (testFillOuts != null)
+{
+  <li class="list-group-item list-group-item-action @color">
+    @questions.Statement
+  </li>
+}
+@code{
+  [Parameter]
+  public int TestFillOutsId{ get; set; }
+  private TestFillOuts testFillOuts;
+  private Questions questions;
+  private string color;
+  protected override void OnInitialized()
+  {
+    testFillOuts = model.CargarTestFillOuts(TestFillOutsId);
+    questions = model.CargarQuestion(testFillOuts.QuestionsId);
+    color = model.GetColor(testFillOuts.Answer);
+  }
+}

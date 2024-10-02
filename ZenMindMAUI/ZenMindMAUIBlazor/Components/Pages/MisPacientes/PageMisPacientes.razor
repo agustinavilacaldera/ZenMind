@@ -1,14 +1,20 @@
-﻿@inject Controllers.ModelController model;
-@page "/misPacientes"
+﻿@page "/misPacientes"
+@inject Controllers.ModelController model;
+@inject NavigationManager navman
 
 <TituloPagina Titulo="Mis Pacientes" href="/home/doctor" />
 
-<ListaMedicoPaciente MedicoId="medicos.Id"/>
+<ListaMedicoPaciente MedicoId="medicos.Id" SelectedItem="seleccionarPaciente"/>
 @code {
   private Medicos medicos;
   protected override void OnInitialized()
   {
     medicos = model.CargarMedicoPorUserId(model.User.UserName);
   }
+  private void seleccionarPaciente(int pId)
+  {
+    navman.NavigateTo($"/detallePaciente/{pId}");
+  }
 
 }
+PageMisPacientes.razor

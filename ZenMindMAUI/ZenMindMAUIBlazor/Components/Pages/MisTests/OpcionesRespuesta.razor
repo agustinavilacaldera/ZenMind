@@ -1,7 +1,16 @@
 <div class="btn-group-vertical" style="width:100%">
-  <button class="boton boton-r1"></button>
-  <button class="boton boton-r2"></button>
-  <button class="boton boton-r3"></button>
-  <button class="boton boton-r4"></button>
-  <button class="boton boton-r5"></button>
+  <button class="boton color-r1" @onclick="()=>seleccionarRespuesta(1)"></button>
+  <button class="boton color-r2" @onclick="()=>seleccionarRespuesta(2)"></button>
+  <button class="boton color-r3" @onclick="()=>seleccionarRespuesta(3)"></button>
+  <button class="boton color-r4" @onclick="()=>seleccionarRespuesta(4)"></button>
+  <button class="boton color-r5" @onclick="()=>seleccionarRespuesta(5)"></button>
 </div>
+
+@code{
+  [Parameter]
+  public EventCallback<int> Respuesta{ get; set; }
+  private void seleccionarRespuesta(int s)
+  {
+    Respuesta.InvokeAsync(s);
+  }
+}

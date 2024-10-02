@@ -1,11 +1,12 @@
 @inject Controllers.ModelController model
 @if (paciente != null)
 {
-  <div class="row">
-    <div class="col-2">@paciente.Id</div>
-    <div class="col-10">@paciente.SurName @paciente.Name</div>
-  </div>
-
+  <button class="list-group-item list-group-item-action @color" @onclick="botonPaciente">
+    <div class="row">
+      <div class="col-2">@paciente.Id</div>
+      <div class="col-10">@paciente.SurName @paciente.Name</div>
+    </div>
+  </button>
 }
 
 
@@ -13,10 +14,18 @@
   [Parameter]
   public int PacienteId { get; set; }
   private Pacientes paciente;
+  private string color="";
+  [Parameter]
+  public EventCallback<int> SelectedItem{ get; set; }
 
   protected override void OnInitialized()
   {
     paciente = model.CargarPaciente(PacienteId);
+    color = model.GetColor(paciente.ObtenerCalificacion());
+  }
+  private void botonPaciente()
+  {
+    SelectedItem.InvokeAsync(PacienteId);
   }
 
 

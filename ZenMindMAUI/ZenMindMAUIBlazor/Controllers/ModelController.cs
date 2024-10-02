@@ -12,6 +12,90 @@ internal class ModelController
   public string message { get; set; }
   private SQLiteConnection connection;
 
+  public TestFillOuts CargarTestFillOuts(int tfoId)
+  {
+    try
+    {
+      return (from x in connection.Table<TestFillOuts>()
+              where x.Id == tfoId
+              select x).FirstOrDefault();
+    }
+    catch { return null; }
+  }
+  public string GetColor(float eval)
+  {
+    if (eval > 0)
+    {
+      if (eval <= 1f)
+        return "color-r1";
+      if (eval <= 2f)
+        return "color-r2";
+      if (eval <= 3f)
+        return "color-r3";
+      if (eval <= 4f)
+        return "color-r4";
+      if (eval <= 5f)
+        return "color-r5";
+    }
+    else
+      return "color-r0";
+    return "color-r0";
+  }
+  public string GetColor(int eval)
+  {
+    if (eval == 1)
+      return "color-r1";
+    if (eval == 2)
+      return "color-r2";
+    if (eval == 3)
+      return "color-r3";
+    if (eval == 4)
+      return "color-r4";
+    if (eval == 5)
+      return "color-r5";
+    return "color-r0";
+  }
+  public List<TestAssignments> ListarTestAssignmentPorPaciente(int pId)
+  {
+    try
+    {
+      return (from x in connection.Table<TestAssignments>()
+              where x.PacientesId == pId
+              select x).ToList();
+    }
+    catch { return null; }
+  }
+  public void ActualizarTestFillOut(TestFillOuts fillOuts)
+  {
+    if (existeTestFillOut(fillOuts.Id))
+    {
+      connection.InsertOrReplace(fillOuts);
+    }
+    else
+    {
+      fillOuts.Id = nextTestFillOut();
+      connection.InsertOrReplace(fillOuts);
+    }
+  }
+
+  private int nextTestFillOut()
+  {
+    try
+    {
+      return (from x in connection.Table<TestFillOuts>()
+              select x).ToList().Max(x => x.Id) + 1;
+    }
+    catch { return 0; }
+  }
+
+  private bool existeTestFillOut(int id)
+  {
+    if ((from x in connection.Table<TestFillOuts>()
+         where x.Id == id
+         select x).ToList().Count() > 0)
+      return true;
+    return false;
+  }
   public List<TestAssignments> ListarTestAssignmentNoResueltosPorPaciente(int pId)
   {
     try
@@ -55,9 +139,22 @@ internal class ModelController
   {
     try
     {
-      return (from x in connection.Table<TestAssignments>()
-              where x.Id == taId
-              select x).FirstOrDefault();
+      TestAssignments t = (from x in connection.Table<TestAssignments>()
+                           where x.Id == taId
+                           select x).FirstOrDefault();
+      if (t != null)
+        t.TestFillOuts = listarTestFillOutsPorTestAssignment(t.Id);
+      return t;
+    }
+    catch { return null; }
+  }
+  private List<TestFillOuts> listarTestFillOutsPorTestAssignment(int taId)
+  {
+    try
+    {
+      return (from x in connection.Table<TestFillOuts>()
+              where x.TestAssignmentId == taId
+              select x).ToList();
     }
     catch { return null; }
   }
@@ -145,9 +242,23 @@ internal class ModelController
   {
     try
     {
-      return (from x in connection.Table<Pacientes>()
-              where x.Id == pId
-              select x).FirstOrDefault();
+      Pacientes p = (from x in connection.Table<Pacientes>()
+                     where x.Id == pId
+                     select x).FirstOrDefault();
+      p.TestFillOuts = ListarTestFillOutsPorPaciente(p.Id);
+      return p;
+    }
+    catch { return null; }
+  }
+  private List<TestFillOuts> ListarTestFillOutsPorPaciente(int pId)
+  {
+    try
+    {
+      return (from tf in connection.Table<TestFillOuts>()
+              join ta in connection.Table<TestAssignments>() on tf.TestAssignmentId equals ta.Id
+              where ta.PacientesId == pId
+              select tf).ToList();
+
     }
     catch { return null; }
   }
@@ -262,9 +373,12 @@ internal class ModelController
   {
     try
     {
-      return (from x in connection.Table<Tests>()
-              where x.Id == tId
-              select x).ToList()[0];
+      Tests t = (from x in connection.Table<Tests>()
+                 where x.Id == tId
+                 select x).FirstOrDefault();
+      if (t != null)
+        t.Questions = ListarQuestionPorTest(t.Id);
+      return t;
     }
     catch { return null; }
   }

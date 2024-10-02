@@ -10,9 +10,7 @@
     </div>
     @foreach (MedicoPaciente mp in listaMedicoPacientes)
     {
-      <button class="list-group-item list-group-item-action" @onclick="()=>botonSelectItem(mp)">
-        <ItemPaciente PacienteId="@mp.PacientesId" />
-      </button>
+      <ItemPaciente PacienteId="@mp.PacientesId" SelectedItem="botonSelectItem" />
     }
   </div>
 
@@ -28,8 +26,9 @@
   {
     listaMedicoPacientes = model.ListarMedicoPacientes(MedicoId);
   }
-  private void botonSelectItem(MedicoPaciente mp)
+  private void botonSelectItem(int pId)
   {
-    SelectedItem.InvokeAsync(mp.Id);
+    SelectedItem.InvokeAsync(pId);
   }
 }
+ListaMedicoPaciente.razor

@@ -162,27 +162,32 @@ mi-modal-dialogo {
     transform: scale(1);
   }
 
-.boton-r1 {
+.color-r1 {
   --back-color: 1,40%; /*240, 40%;*/
   background: linear-gradient( 140deg, hsla(var(--back-color), 50%, 1) min(2em, 20%), hsla(var(--back-color), 50%, 0.6) min(8em, 100%));
 }
 
-.boton-r2 {
+.color-r2 {
   --back-color: 25,60%; /*240, 40%;*/
   background: linear-gradient( 140deg, hsla(var(--back-color), 50%, 1) min(2em, 20%), hsla(var(--back-color), 50%, 0.6) min(8em, 100%));
 }
 
-.boton-r3 {
+.color-r3 {
   --back-color: 44,254%; /*240, 40%;*/
   background: linear-gradient( 140deg, hsla(var(--back-color), 50%, 1) min(2em, 20%), hsla(var(--back-color), 50%, 0.6) min(8em, 100%));
 }
 
-.boton-r4 {
+.color-r4 {
   --back-color: 70,40%; /*240, 40%;*/
   background: linear-gradient( 140deg, hsla(var(--back-color), 50%, 1) min(2em, 20%), hsla(var(--back-color), 50%, 0.6) min(8em, 100%));
 }
 
-.boton-r5 {
+.color-r5 {
   --back-color: 104,60%; /*240, 40%;*/
   background: linear-gradient( 140deg, hsla(var(--back-color), 50%, 1) min(2em, 20%), hsla(var(--back-color), 50%, 0.6) min(8em, 100%));
+}
+
+.color-r0 {
+  --back-color: 0,0%; /*240, 40%;*/
+  background: linear-gradient( 140deg, hsla(var(--back-color), 50%,1) min(2em, 20%), hsla(var(--back-color), 50%, 0.6) min(8em, 100%));
 }

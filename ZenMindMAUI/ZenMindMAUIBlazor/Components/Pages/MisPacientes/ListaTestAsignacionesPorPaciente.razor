@@ -1,0 +1,24 @@
+@inject Controllers.ModelController model
+<div class="list-group">
+  <div class="list-group-item">
+    <div class="row">
+      <div class="col-1">Id</div>
+      <div class="col-2">Fecha</div>
+      <div class="col-6">Titulo Test</div>
+      <div class="col-3">Puntuacion</div>
+    </div>
+  </div>
+  @foreach (TestAssignments testAssignments in testAssignmentsList)
+  {
+    <ItemTestAssignmentPorPaciente TestAssignmentId="testAssignments.Id" />
+  }
+</div>
+@code{
+  [Parameter]
+  public int PacienteId{ get; set; }
+  private List<TestAssignments> testAssignmentsList;
+  protected override void OnInitialized()
+  {
+    testAssignmentsList = model.ListarTestAssignmentPorPaciente(PacienteId);
+  }
+}

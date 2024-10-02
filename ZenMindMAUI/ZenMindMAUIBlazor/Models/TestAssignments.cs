@@ -19,5 +19,12 @@ namespace ZenMindMAUIBlazor.Models
     [Indexed]
     public int PacientesId { get; set; }
     public bool Respondido { get; set; }=false;
+    [Ignore]
+    public List<TestFillOuts> TestFillOuts { get; set; }
+    public float ObtenerCalificacion()
+    {
+      ResultadoTest rt = new(TestFillOuts);
+      return rt.ObtenerPonderado();
+    }
   }
 }

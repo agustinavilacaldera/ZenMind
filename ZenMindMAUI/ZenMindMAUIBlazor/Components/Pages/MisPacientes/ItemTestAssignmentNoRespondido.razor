@@ -1,0 +1,36 @@
+@inject Controllers.ModelController model
+
+@if (testAssignments != null)
+{
+  <button class="list-group-item list-group-item-action" @onclick="selectItem">
+    <div class="row">
+      <div class="col-2">@testAssignments.Id</div>
+      <div class="col-2">@testAssignments.Date.ToShortDateString()</div>
+      <div class="col-4">@pacientes.SurName @pacientes.Name</div>
+      <div class="col-4">
+        @tests.Title
+      </div>
+    </div>
+  </button>
+}
+
+
+@code{
+  [Parameter]
+  public int TestAssignmentId{ get; set; }
+  [Parameter]
+  public EventCallback<int> SelectedItem{ get; set; }
+  private TestAssignments testAssignments;
+  private Pacientes pacientes;
+  private Tests tests;
+  protected override void OnInitialized()
+  {
+    testAssignments = model.CargarTestAssignment(TestAssignmentId);
+    pacientes = model.CargarPaciente(testAssignments.PacientesId);
+    tests = model.CargarTest(testAssignments.TestId);
+  }
+  private void selectItem()
+  {
+    SelectedItem.InvokeAsync(testAssignments.Id);
+  }
+}

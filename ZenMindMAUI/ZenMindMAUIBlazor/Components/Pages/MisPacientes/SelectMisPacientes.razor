@@ -18,7 +18,7 @@
   [Parameter]
   public EventCallback<bool> Showing { get; set; }
   [Parameter]
-  public EventCallback<int> SelectedMedicoPaciente{ get; set; }
+  public EventCallback<int> SelectedPaciente{ get; set; }
   [Parameter]
   public int MedicoId { get; set; }
   //private List<MedicoPaciente> listaPacientes;
@@ -26,9 +26,9 @@
   {
     //listaPacientes = model.ListarMedicoPacientes(MedicoId);
   }
-  private void botonSeleccionar(int mpId)
+  private void botonSeleccionar(int pId)
   {
-    SelectedMedicoPaciente.InvokeAsync(mpId);
+    SelectedPaciente.InvokeAsync(pId);
     Showing.InvokeAsync(false);
     
     // model.ActualizarMedicoPaciente(medicoPaciente);

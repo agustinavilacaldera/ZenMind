@@ -1,0 +1,18 @@
+﻿@page "/detallePaciente/{PacienteId:int}"
+@inject Controllers.ModelController model
+
+<TituloPagina Titulo="Detalle Pacientes" href="/misPacientes" />
+<br />
+@paciente.SurName @paciente.Name
+<br />
+<ListaTestAsignacionesPorPaciente PacienteId="paciente.Id" />
+
+@code {
+  [Parameter]
+  public int PacienteId{ get; set; }
+  private Pacientes paciente;
+  protected override void OnInitialized()
+  {
+    paciente = model.CargarPaciente(PacienteId);
+  }
+}

@@ -1,0 +1,36 @@
+@inject Controllers.ModelController model
+@if (listaTestAssignment != null)
+{
+  <div class="list-group">
+    <div class="list-group-item">
+      <div class="row">
+        <div class="col-2">Id</div>
+        <div class="col-2">Fecha</div>
+        <div class="col-4">Paciente</div>
+        <div class="col-4">Titulo Test</div>
+      </div>
+    </div>
+    @foreach(TestAssignments testAssignments in listaTestAssignment)
+    {
+      <ItemTestAssignmentNoRespondido TestAssignmentId="testAssignments.Id" SelectedItem="selectTestAssignment" />
+    }
+  </div>
+
+}
+
+@code {
+  [Parameter]
+  public int MedicoId { get; set; }
+  private List<TestAssignments> listaTestAssignment;
+  [Parameter]
+  public EventCallback<int> SelectedTestAssignment{ get; set; }
+  protected override void OnInitialized()
+  {
+    listaTestAssignment = model.ListarTestAssignmentByMedicoNoRespondido(MedicoId);
+  }
+  private void selectTestAssignment(int taId)
+  {
+    SelectedTestAssignment.InvokeAsync(taId);
+  }
+}
+ListaTestAsignacionesNoRespondidas.razor

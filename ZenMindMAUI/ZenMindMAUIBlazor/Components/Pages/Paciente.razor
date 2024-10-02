@@ -1,12 +1,21 @@
 ﻿@page "/home/paciente"
+@inject Controllers.ModelController model
+@inject NavigationManager navman
+@using ZenMindMAUIBlazor.Components.Pages.MisTests
 
 <TituloPaginaPrincipal Titulo="Usuario Pacientes" />
 
-<div class="list-group">
-  
-  <a class="list-group-item list-group-item-action" style="width:100%" href="/misTests">Test</a>
-</div>
+<ListaTestPorResolver PacienteId="paciente.Id" SelectedItem="selectItem" />
 
 @code {
+  private Pacientes paciente;
 
+  protected override void OnInitialized()
+  {
+    paciente = model.CargarPacientePorUserId(model.User.UserName);
+  }
+  private void selectItem(int taId)
+  {
+    navman.NavigateTo($"/resolverTest/{taId}");
+  }
 }

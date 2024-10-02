@@ -19,5 +19,12 @@ namespace ZenMindMAUIBlazor.Models
     public DateTime Birthday { get; set; }
     [Indexed]
     public string UsersId { get; set; }
+    [Ignore]
+    public List<TestFillOuts> TestFillOuts { get; set; }
+    public float ObtenerCalificacion()
+    {
+      ResultadoTest rt= new(TestFillOuts);
+      return rt.ObtenerPonderado();
+    }
   }
 }

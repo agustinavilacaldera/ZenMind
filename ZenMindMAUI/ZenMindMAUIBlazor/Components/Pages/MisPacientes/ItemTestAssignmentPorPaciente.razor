@@ -1,0 +1,41 @@
+@inject Controllers.ModelController model
+@if (testAssignments != null)
+{
+  <button class="list-group-item list-group-item-action @color" @onclick="botonSelect">
+    <div class="row">
+      <div class="col-1">@testAssignments.Id</div>
+      <div class="col-2">@testAssignments.Date.ToShortDateString()</div>
+      <div class="col-6">
+        @tests.Title
+      </div>
+      <div class="col-3">@testAssignments.ObtenerCalificacion()</div>
+    </div>
+  </button>
+  @if (mostrarDetalle)
+  {
+    <ul class="list-group">
+      @foreach (TestFillOuts testFillOuts in testAssignments.TestFillOuts)
+      {
+        <ItemRespuesta TestFillOutsId="testFillOuts.Id" />
+      }
+    </ul>
+  }
+}
+@code {
+  [Parameter]
+  public int TestAssignmentId { get; set; }
+  private TestAssignments testAssignments;
+  private Tests tests;
+  private string color;
+  private bool mostrarDetalle=false;
+  protected override void OnInitialized()
+  {
+    testAssignments = model.CargarTestAssignment(TestAssignmentId);
+    tests = model.CargarTest(testAssignments.TestId);
+    color=model.GetColor(testAssignments.ObtenerCalificacion());
+  }
+  private void botonSelect()
+  {
+    mostrarDetalle = !mostrarDetalle;
+  }
+}

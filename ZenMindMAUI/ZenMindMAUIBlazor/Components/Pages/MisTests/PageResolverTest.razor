@@ -8,7 +8,7 @@
 <br />
 @pregunta.Statement
 <br />
-<OpcionesRespuesta />
+<OpcionesRespuesta Respuesta="obtenerRespuesta" />
 <button @onclick="siguientePregunta">Siguiente Pregunta</button>
 
 
@@ -32,9 +32,22 @@
     idx++;
     if (idx >= listaPreguntas.Count)
     {
+      testAssignments.Respondido = true;
+      model.ActualizarTestAssignment(testAssignments);
       navman.NavigateTo("/misTests");
     }
     else
       pregunta = model.CargarQuestion(listaPreguntas[idx].Id);
+  }
+  private void obtenerRespuesta(int r)
+  {
+    TestFillOuts tfo = new()
+      {
+        Answer = r,
+        QuestionsId = pregunta.Id,
+        TestAssignmentId = TestAssignmentId
+      };
+      model.ActualizarTestFillOut(tfo);
+      siguientePregunta();
   }
 }
