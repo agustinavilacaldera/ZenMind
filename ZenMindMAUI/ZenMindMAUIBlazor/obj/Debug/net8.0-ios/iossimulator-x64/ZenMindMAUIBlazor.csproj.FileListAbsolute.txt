@@ -348,3 +348,4 @@ E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\
 E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-ios\iossimulator-x64\ZenMindMAUIBlazor.pdb
 E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-ios\iossimulator-x64\ZenMindMAUIBlazor.genruntimeconfig.cache
 E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-ios\iossimulator-x64\ref\ZenMindMAUIBlazor.dll
+E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-ios\iossimulator-x64\BlazorScheduler.dll

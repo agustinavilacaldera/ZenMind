@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\agust\\.nuget\\packages\\blazorscheduler\\4.3.3\\contentFiles\\any\\net6.0\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\agust\\.nuget\\packages\\blazorscheduler\\4.3.3\\contentFiles\\any\\net6.0\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
+    },
+    {
       "Id": "E:\\Users\\agust\\Documents\\GitHub\\ZenMind\\ZenMindMAUI\\ZenMindMAUIBlazor\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\ZenMindMAUIBlazor.styles.css",
       "PackagePath": "staticwebassets\\ZenMindMAUIBlazor.styles.css"
     },

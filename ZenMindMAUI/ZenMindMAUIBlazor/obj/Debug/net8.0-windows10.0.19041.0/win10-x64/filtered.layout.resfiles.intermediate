@@ -1,3 +1,7 @@
+wwwroot\css\styles.css
+wwwroot\js\scripts.js
+wwwroot\_content\BlazorScheduler\css\styles.css
+wwwroot\_content\BlazorScheduler\js\scripts.js
 Components\Layout\MainLayout.razor.css
 Components\Layout\NavMenu.razor.css
 OpenSans-Regular.ttf

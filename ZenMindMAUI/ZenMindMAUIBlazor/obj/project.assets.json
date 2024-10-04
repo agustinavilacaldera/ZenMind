@@ -2,6 +2,36 @@
   "version": 3,
   "targets": {
     "net8.0-android34.0": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -782,6 +812,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -2727,6 +2770,36 @@
       }
     },
     "net8.0-android34.0/android-arm": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -3507,6 +3580,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -5446,6 +5532,36 @@
       }
     },
     "net8.0-android34.0/android-arm64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -6226,6 +6342,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -8165,6 +8294,36 @@
       }
     },
     "net8.0-android34.0/android-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -8945,6 +9104,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -10884,6 +11056,36 @@
       }
     },
     "net8.0-android34.0/android-x86": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -11664,6 +11866,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -13603,6 +13818,36 @@
       }
     },
     "net8.0-android34.0/iossimulator-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -14383,6 +14628,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -16322,6 +16580,36 @@
       }
     },
     "net8.0-android34.0/maccatalyst-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -17102,6 +17390,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -19041,6 +19342,36 @@
       }
     },
     "net8.0-android34.0/win10-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "GoogleGson/2.10.1.4": {
         "type": "package",
         "compile": {
@@ -19821,6 +20152,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -21760,6 +22104,36 @@
       }
     },
     "net8.0-ios17.5": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -22516,6 +22890,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -22688,6 +23075,36 @@
       }
     },
     "net8.0-ios17.5/android-arm": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -23444,6 +23861,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -23610,6 +24040,36 @@
       }
     },
     "net8.0-ios17.5/android-arm64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -24366,6 +24826,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -24532,6 +25005,36 @@
       }
     },
     "net8.0-ios17.5/android-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -25288,6 +25791,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -25454,6 +25970,36 @@
       }
     },
     "net8.0-ios17.5/android-x86": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -26210,6 +26756,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -26376,6 +26935,36 @@
       }
     },
     "net8.0-ios17.5/iossimulator-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -27132,6 +27721,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -27298,6 +27900,36 @@
       }
     },
     "net8.0-ios17.5/maccatalyst-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -28054,6 +28686,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -28220,6 +28865,36 @@
       }
     },
     "net8.0-ios17.5/win10-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -28978,6 +29653,19 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "sqlite-net-pcl/1.9.172": {
         "type": "package",
         "dependencies": {
@@ -29142,6 +29830,36 @@
       }
     },
     "net8.0-maccatalyst17.5": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -29898,6 +30616,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -30128,6 +30859,36 @@
       }
     },
     "net8.0-maccatalyst17.5/android-arm": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -30884,6 +31645,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -31029,6 +31803,36 @@
       }
     },
     "net8.0-maccatalyst17.5/android-arm64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -31785,6 +32589,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -31930,6 +32747,36 @@
       }
     },
     "net8.0-maccatalyst17.5/android-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -32686,6 +33533,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -32831,6 +33691,36 @@
       }
     },
     "net8.0-maccatalyst17.5/android-x86": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -33587,6 +34477,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -33732,6 +34635,36 @@
       }
     },
     "net8.0-maccatalyst17.5/iossimulator-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -34488,6 +35421,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -34630,6 +35576,36 @@
       }
     },
     "net8.0-maccatalyst17.5/maccatalyst-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -35386,6 +36362,19 @@
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -35531,6 +36520,36 @@
       }
     },
     "net8.0-maccatalyst17.5/win10-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -36289,6 +37308,19 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "sqlite-net-pcl/1.9.172": {
         "type": "package",
         "dependencies": {
@@ -36429,6 +37461,36 @@
       }
     },
     "net8.0-windows10.0.19041": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -37356,6 +38418,19 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "sqlite-net-pcl/1.9.172": {
         "type": "package",
         "dependencies": {
@@ -37584,6 +38659,36 @@
       }
     },
     "net8.0-windows10.0.19041/android-arm": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -38469,6 +39574,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -38614,6 +39732,36 @@
       }
     },
     "net8.0-windows10.0.19041/android-arm64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -39499,6 +40647,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -39644,6 +40805,36 @@
       }
     },
     "net8.0-windows10.0.19041/android-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -40529,6 +41720,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -40674,6 +41878,36 @@
       }
     },
     "net8.0-windows10.0.19041/android-x86": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -41559,6 +42793,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -41704,6 +42951,36 @@
       }
     },
     "net8.0-windows10.0.19041/iossimulator-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -42589,6 +43866,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -42731,6 +44021,36 @@
       }
     },
     "net8.0-windows10.0.19041/maccatalyst-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -43616,6 +44936,19 @@
         "build": {
           "buildTransitive/Microsoft.WindowsAppSDK.props": {},
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "sqlite-net-pcl/1.9.172": {
@@ -43761,6 +45094,36 @@
       }
     },
     "net8.0-windows10.0.19041/win10-x64": {
+      "BlazorScheduler/4.3.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net6.0/wwwroot/css/styles.css": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          },
+          "contentFiles/any/net6.0/wwwroot/js/scripts.js": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        },
+        "build": {
+          "buildTransitive/BlazorScheduler.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BlazorScheduler.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/8.0.0": {
         "type": "package",
         "dependencies": {
@@ -44654,6 +46017,19 @@
           "buildTransitive/Microsoft.WindowsAppSDK.targets": {}
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "sqlite-net-pcl/1.9.172": {
         "type": "package",
         "dependencies": {
@@ -44798,6 +46174,28 @@
     }
   },
   "libraries": {
+    "BlazorScheduler/4.3.3": {
+      "sha512": "eQWfSjsrPR/PpTeFps+v/sn82hNY1jDo/A12L6SQE2ZBeUYzBbQrGAKiMTyB7iie4McY0ybxDud6rY9uJiIy/g==",
+      "type": "package",
+      "path": "blazorscheduler/4.3.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazorscheduler.4.3.3.nupkg.sha512",
+        "blazorscheduler.nuspec",
+        "build/BlazorScheduler.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/BlazorScheduler.props",
+        "buildTransitive/BlazorScheduler.props",
+        "content/wwwroot/css/styles.css",
+        "content/wwwroot/js/scripts.js",
+        "contentFiles/any/net6.0/wwwroot/css/styles.css",
+        "contentFiles/any/net6.0/wwwroot/js/scripts.js",
+        "lib/net6.0/BlazorScheduler.dll",
+        "staticwebassets/css/styles.css",
+        "staticwebassets/js/scripts.js"
+      ]
+    },
     "GoogleGson/2.10.1.4": {
       "sha512": "L1vdbwbQzvKUoUGiMpMoJG5fqfLXaP6zMy1a26AYJQJSQKUO7Ojr2U5BAmgQoRxQ8J2GDjBfnfgnrsnorb4y5Q==",
       "type": "package",
@@ -47504,6 +48902,36 @@
         "tools/x86/GenXbf.dll"
       ]
     },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "sqlite-net-pcl/1.9.172": {
       "sha512": "go533+huyvg5bOMmCpX+DyvLrcVRiEBIpqEiDHgXRijWIBBNkWnyMr/w+5ZzrUArKY+4ApucsbBnFtP3QITrJg==",
       "type": "package",
@@ -49952,38 +51380,46 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-android34.0": [
+      "BlazorScheduler >= 4.3.3",
       "Microsoft.AspNetCore.Components.WebView.Maui >= 8.0.90",
       "Microsoft.Data.Sqlite >= 8.0.8",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maui.Controls >= 8.0.90",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.90",
       "Microsoft.NET.ILLink.Tasks >= 8.0.8",
+      "Newtonsoft.Json >= 13.0.3",
       "sqlite-net-pcl >= 1.9.172"
     ],
     "net8.0-ios17.5": [
+      "BlazorScheduler >= 4.3.3",
       "Microsoft.AspNetCore.Components.WebView.Maui >= 8.0.90",
       "Microsoft.Data.Sqlite >= 8.0.8",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maui.Controls >= 8.0.90",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.90",
       "Microsoft.NET.ILLink.Tasks >= 8.0.8",
+      "Newtonsoft.Json >= 13.0.3",
       "sqlite-net-pcl >= 1.9.172"
     ],
     "net8.0-maccatalyst17.5": [
+      "BlazorScheduler >= 4.3.3",
       "Microsoft.AspNetCore.Components.WebView.Maui >= 8.0.90",
       "Microsoft.Data.Sqlite >= 8.0.8",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maui.Controls >= 8.0.90",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.90",
       "Microsoft.NET.ILLink.Tasks >= 8.0.8",
+      "Newtonsoft.Json >= 13.0.3",
       "sqlite-net-pcl >= 1.9.172"
     ],
     "net8.0-windows10.0.19041": [
+      "BlazorScheduler >= 4.3.3",
       "Microsoft.AspNetCore.Components.WebView.Maui >= 8.0.90",
       "Microsoft.Data.Sqlite >= 8.0.8",
       "Microsoft.Extensions.Logging.Debug >= 8.0.0",
       "Microsoft.Maui.Controls >= 8.0.90",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.90",
+      "Newtonsoft.Json >= 13.0.3",
       "sqlite-net-pcl >= 1.9.172"
     ]
   },
@@ -50053,6 +51489,10 @@
       "net8.0-android34.0": {
         "targetAlias": "net8.0-android",
         "dependencies": {
+          "BlazorScheduler": {
+            "target": "Package",
+            "version": "[4.3.3, )"
+          },
           "Microsoft.AspNetCore.Components.WebView.Maui": {
             "target": "Package",
             "version": "[8.0.90, )"
@@ -50078,6 +51518,10 @@
             "target": "Package",
             "version": "[8.0.8, )",
             "autoReferenced": true
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",
@@ -50108,6 +51552,10 @@
       "net8.0-ios17.5": {
         "targetAlias": "net8.0-ios",
         "dependencies": {
+          "BlazorScheduler": {
+            "target": "Package",
+            "version": "[4.3.3, )"
+          },
           "Microsoft.AspNetCore.Components.WebView.Maui": {
             "target": "Package",
             "version": "[8.0.90, )"
@@ -50133,6 +51581,10 @@
             "target": "Package",
             "version": "[8.0.8, )",
             "autoReferenced": true
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",
@@ -50163,6 +51615,10 @@
       "net8.0-maccatalyst17.5": {
         "targetAlias": "net8.0-maccatalyst",
         "dependencies": {
+          "BlazorScheduler": {
+            "target": "Package",
+            "version": "[4.3.3, )"
+          },
           "Microsoft.AspNetCore.Components.WebView.Maui": {
             "target": "Package",
             "version": "[8.0.90, )"
@@ -50188,6 +51644,10 @@
             "target": "Package",
             "version": "[8.0.8, )",
             "autoReferenced": true
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",
@@ -50219,6 +51679,10 @@
       "net8.0-windows10.0.19041": {
         "targetAlias": "net8.0-windows10.0.19041.0",
         "dependencies": {
+          "BlazorScheduler": {
+            "target": "Package",
+            "version": "[4.3.3, )"
+          },
           "Microsoft.AspNetCore.Components.WebView.Maui": {
             "target": "Package",
             "version": "[8.0.90, )"
@@ -50238,6 +51702,10 @@
           "Microsoft.Maui.Controls.Compatibility": {
             "target": "Package",
             "version": "[8.0.90, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",

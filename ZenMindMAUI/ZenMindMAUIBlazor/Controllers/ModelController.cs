@@ -1,5 +1,8 @@
 ﻿
+using Newtonsoft.Json;
 using SQLite;
+using System.Net.Mail;
+using System.Net;
 using System.Security.Cryptography;
 using ZenMindMAUIBlazor.Models;
 
@@ -8,10 +11,108 @@ namespace ZenMindMAUIBlazor.Controllers;
 
 internal class ModelController
 {
+  public Configuraciones Settings { get; set; }
   public Users User { get; set; }
-  public string message { get; set; }
+  public string Ruta { get; set; }
+  public string Message { get; set; }
   private SQLiteConnection connection;
 
+  private void enviarCorreo(string toEmail, string subject, string body)
+  {
+    //string StatusMessage = string.Empty;
+    string email = this.Settings.Email.Email;
+    string host = this.Settings.Email.Host;
+    int port=this.Settings.Email.Port;
+    string pwd = this.Settings.Email.Password;
+    try
+    {
+      using (MailMessage mail = new MailMessage())
+      {
+        mail.From = new MailAddress(email);
+        mail.To.Add(toEmail);
+        mail.Subject = subject;
+        mail.Body = body;
+        mail.IsBodyHtml = true;
+
+        using (SmtpClient smtp = new SmtpClient(host, port))
+        {
+          smtp.Credentials = new NetworkCredential(email, pwd);
+          smtp.EnableSsl = true;
+          smtp.Send(mail);
+        }
+      }
+    }
+    catch (SmtpException ex)
+    {
+      Message = $"SMTP error: {ex.Message}";
+    }
+    catch (Exception ex)
+    {
+      Message = $"Error while sending email: {ex.Message}";
+    }
+  }
+  public void notificarAlMedico(TestAssignments ta)
+  {
+    ta = CargarTestAssignment(ta.Id);
+    if (ta.ObtenerCalificacion() <= 1)
+    {
+      Pacientes p = CargarPaciente(ta.PacientesId);
+      enviarCorreo(CargarMedico(ta.MedicosId).Email,"Paciente en Rojo", $"El paciente {p.SurName} {p.Name} ha obtenido una muy mala valoración");
+    }
+  }
+  public void LoadSettings()
+  {
+    try
+    {
+      LoadSettingFromFile();
+      //apiController = new(Configuraciones.ApiServer);
+    }
+    catch (Exception)
+    {
+      Message = "The settings file is empty, please record the settings";
+
+    }
+  }
+  private void LoadSettingFromFile()
+  {
+    //string dir = Directory.GetCurrentDirectory();
+
+    string f = Ruta + "\\Configuraciones.json";
+    string r = "";
+    try
+    {
+      StreamReader st = new StreamReader(f);
+      r = st.ReadLine();
+      st.Close();
+      Settings = JsonConvert.DeserializeObject<Configuraciones>(r);
+    }
+    catch (Exception)
+    {
+      Settings = new Configuraciones();
+      SaveSettings();
+      //throw;
+    }
+    //return r;
+  }
+  public void SaveSettings()
+  {
+    //string dir = Directory.GetCurrentDirectory();
+
+    string f = Ruta + "\\Configuraciones.json";
+    //StringContent sc = new StringContent(JsonConvert.SerializeObject(setting), Encoding.UTF8, "application/json");
+    string sc = JsonConvert.SerializeObject(Settings);
+    try
+    {
+      StreamWriter sw = new StreamWriter(f);
+      string s = sc;
+      sw.WriteLine(s);
+      sw.Close();
+    }
+    catch (Exception)
+    {
+      //throw;
+    }
+  }
   public TestFillOuts CargarTestFillOuts(int tfoId)
   {
     try
@@ -77,7 +178,6 @@ internal class ModelController
       connection.InsertOrReplace(fillOuts);
     }
   }
-
   private int nextTestFillOut()
   {
     try
@@ -87,7 +187,6 @@ internal class ModelController
     }
     catch { return 0; }
   }
-
   private bool existeTestFillOut(int id)
   {
     if ((from x in connection.Table<TestFillOuts>()
@@ -106,7 +205,7 @@ internal class ModelController
     }
     catch { return null; }
   }
-  public void ActualizarTestAssignment(TestAssignments ta)
+  public TestAssignments ActualizarTestAssignment(TestAssignments ta)
   {
     if (existeTestAssignment(ta.Id))
     {
@@ -116,7 +215,9 @@ internal class ModelController
     {
       ta.Id = nextTestAssignment();
       connection.InsertOrReplace(ta);
+      enviarCorreo(CargarPaciente(ta.PacientesId).Email,"Nuevo test para responder", $"Se le a asignado un nuevo test para el día {ta.Date.ToShortDateString()}");
     }
+    return ta;
   }
   private int nextTestAssignment()
   {
@@ -573,7 +674,7 @@ internal class ModelController
     }
     catch (Exception ex)
     {
-      message = ex.Message;
+      Message = ex.Message;
     }
     return null;
   }
@@ -587,7 +688,7 @@ internal class ModelController
     }
     catch (Exception ex)
     {
-      message = ex.Message;
+      Message = ex.Message;
     }
 
     return null;
@@ -626,7 +727,7 @@ internal class ModelController
     }
     catch (Exception ex)
     {
-      message = ex.Message;
+      Message = ex.Message;
     }
   }
   public bool ExisteAdministrativo(int aId)
@@ -649,6 +750,9 @@ internal class ModelController
   }
   public ModelController()
   {
+    Ruta = AppDomain.CurrentDomain.BaseDirectory;
+    
+    LoadSettings();
     initDatabase();
   }
   private void initDatabase()
@@ -684,7 +788,7 @@ internal class ModelController
     }
     catch (Exception ex)
     {
-      message = ex.Message;
+      Message = ex.Message;
     }
     return false;
   }
@@ -700,7 +804,7 @@ internal class ModelController
     }
     catch (Exception ex)
     {
-      message = ex.Message;
+      Message = ex.Message;
     }
 
     return true;

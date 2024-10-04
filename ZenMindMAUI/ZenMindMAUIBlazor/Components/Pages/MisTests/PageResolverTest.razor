@@ -4,13 +4,13 @@
 
 <TituloPagina Titulo="Resolver Test" href="/misTests" />
 
-@tests.Title
+<h4>@tests.Title</h4>
 <br />
-@pregunta.Statement
-<br />
-<OpcionesRespuesta Respuesta="obtenerRespuesta" />
-<button @onclick="siguientePregunta">Siguiente Pregunta</button>
+<div class="card-body">
+  @pregunta.Statement
+</div>
 
+<OpcionesRespuesta Respuesta="obtenerRespuesta" />
 
 @code {
   [Parameter]
@@ -33,7 +33,8 @@
     if (idx >= listaPreguntas.Count)
     {
       testAssignments.Respondido = true;
-      model.ActualizarTestAssignment(testAssignments);
+      testAssignments=model.ActualizarTestAssignment(testAssignments);
+      model.notificarAlMedico(testAssignments);
       navman.NavigateTo("/misTests");
     }
     else

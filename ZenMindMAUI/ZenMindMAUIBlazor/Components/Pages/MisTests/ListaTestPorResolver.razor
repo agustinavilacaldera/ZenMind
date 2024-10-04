@@ -1,5 +1,26 @@
 @inject Controllers.ModelController model
 
+<Scheduler>
+  <Appointments>
+    @foreach (TestAssignments testAssignments in listaTestAssignment)
+    {
+      @if (testAssignments.Date == DateTime.Today)
+      {
+        <Appointment Start="testAssignments.Date" End="testAssignments.Date" Color="green">
+          <button class="boton color-r5" @onclick="()=>selectTestAssignment(testAssignments.Id)">Go</button>
+        </Appointment>
+      }
+      else
+      {
+        <Appointment Start="testAssignments.Date" End="testAssignments.Date" Color="red">
+          <button class="boton color-r1">Wait</button>
+        </Appointment>
+      }
+      
+    }
+  </Appointments>
+</Scheduler>
+@*
 @if (listaTestAssignment != null)
 {
   <div class="list-group">
@@ -15,7 +36,8 @@
   {
     <ItemMisTestAssignment TestAssignmentId="testAssignments.Id" SelectedTestAssignment="selectTestAssignment" />
   }
-}
+
+*@
 
 @code {
   [Parameter]

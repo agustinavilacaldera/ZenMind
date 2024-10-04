@@ -9,11 +9,13 @@
     ".NETCoreApp,Version=v8.0/win10-x64": {
       "ZenMindMAUIBlazor/1.0": {
         "dependencies": {
+          "BlazorScheduler": "4.3.3",
           "Microsoft.AspNetCore.Components.WebView.Maui": "8.0.90",
           "Microsoft.Data.Sqlite": "8.0.8",
           "Microsoft.Extensions.Logging.Debug": "8.0.0",
           "Microsoft.Maui.Controls": "8.0.90",
           "Microsoft.Maui.Controls.Compatibility": "8.0.90",
+          "Newtonsoft.Json": "13.0.3",
           "sqlite-net-pcl": "1.9.172",
           "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.34"
         },
@@ -30,6 +32,17 @@
           "WinRT.Runtime.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.0.8.46841"
+          }
+        }
+      },
+      "BlazorScheduler/4.3.3": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/BlazorScheduler.dll": {
+            "assemblyVersion": "4.3.3.0",
+            "fileVersion": "4.3.3.0"
           }
         }
       },
@@ -659,6 +672,14 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
+          }
+        }
+      },
       "sqlite-net-pcl/1.9.172": {
         "dependencies": {
           "SQLitePCLRaw.bundle_green": "2.1.2"
@@ -744,6 +765,13 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
+    },
+    "BlazorScheduler/4.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eQWfSjsrPR/PpTeFps+v/sn82hNY1jDo/A12L6SQE2ZBeUYzBbQrGAKiMTyB7iie4McY0ybxDud6rY9uJiIy/g==",
+      "path": "blazorscheduler/4.3.3",
+      "hashPath": "blazorscheduler.4.3.3.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/8.0.0": {
       "type": "package",
@@ -1038,6 +1066,13 @@
       "sha512": "sha512-XW6cNzbGKDuzn+iCY1L9pNDm3pF78te8PXjKWEYk+rgePVPV/j2otr75Q5NMbWzsMF461Qq7aPJZKUQAQJNISQ==",
       "path": "microsoft.windowsappsdk/1.5.240802000",
       "hashPath": "microsoft.windowsappsdk.1.5.240802000.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
     "sqlite-net-pcl/1.9.172": {
       "type": "package",

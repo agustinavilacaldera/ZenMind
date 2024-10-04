@@ -235,6 +235,9 @@
     <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\blazorscheduler\4.3.3\lib\net6.0\BlazorScheduler.dll">
+      <PackagePath>BlazorScheduler.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\microsoft.aspnetcore.authorization\8.0.0\lib\net8.0\Microsoft.AspNetCore.Authorization.dll">
       <PackagePath>Microsoft.AspNetCore.Authorization.dll</PackagePath>
     </AppxPackagedFile>
@@ -385,6 +388,9 @@
     <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\microsoft.windowsappsdk\1.5.240802000\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\newtonsoft.json\13.0.3\lib\net6.0\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\sqlite-net-pcl\1.9.172\lib\netstandard2.0\SQLite-net.dll">
       <PackagePath>SQLite-net.dll</PackagePath>
     </AppxPackagedFile>
@@ -519,6 +525,18 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\microsoft.maui.core\8.0.90\lib\net8.0-windows10.0.19041\Microsoft.Maui.pri">
       <PackagePath>Microsoft.Maui.pri</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\blazorscheduler\4.3.3\contentFiles\any\net6.0\wwwroot\css\styles.css">
+      <PackagePath>wwwroot\css\styles.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\blazorscheduler\4.3.3\contentFiles\any\net6.0\wwwroot\js\scripts.js">
+      <PackagePath>wwwroot\js\scripts.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\blazorscheduler\4.3.3\staticwebassets\css\styles.css">
+      <PackagePath>wwwroot\_content\BlazorScheduler\css\styles.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\blazorscheduler\4.3.3\staticwebassets\js\scripts.js">
+      <PackagePath>wwwroot\_content\BlazorScheduler\js\scripts.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\ZenMindMAUIBlazor.styles.css">
       <PackagePath>wwwroot\ZenMindMAUIBlazor.styles.css</PackagePath>

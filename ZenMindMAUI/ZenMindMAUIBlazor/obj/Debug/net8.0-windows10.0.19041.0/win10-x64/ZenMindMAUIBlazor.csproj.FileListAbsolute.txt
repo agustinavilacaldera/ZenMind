@@ -212,3 +212,5 @@ E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\
 E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\BlazorScheduler.dll
+E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Newtonsoft.Json.dll

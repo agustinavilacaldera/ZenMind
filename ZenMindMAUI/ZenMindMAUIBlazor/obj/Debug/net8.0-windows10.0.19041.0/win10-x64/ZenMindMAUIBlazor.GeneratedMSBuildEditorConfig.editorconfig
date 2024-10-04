@@ -130,6 +130,13 @@ build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pbi5yYXpv
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/Configuraciones/PageConfiguraciones.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb25maWd1cmFjaW9uZXNcUGFnZUNvbmZpZ3VyYWNpb25lcy5yYXpvcg==
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Users/agust/Documents/GitHub/ZenMind/ZenMindMAUI/ZenMindMAUIBlazor/Components/Pages/Doctor.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 

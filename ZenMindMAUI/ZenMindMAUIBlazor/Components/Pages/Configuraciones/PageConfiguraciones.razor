@@ -1,0 +1,49 @@
+﻿@page "/configuraciones"
+@inject Controllers.ModelController model
+@inject NavigationManager navman
+
+<TituloPagina Titulo="Configuraciones" href="/" />
+
+<EditForm Model="model.Settings" OnSubmit="salvarConfiguraciones">
+  <div class="list-group">
+    <button class="list-group-item list-group-item-action color-r1" @onclick="showEmailForm">Email</button>
+    @if (sef)
+    {
+      <div class="mb-3">
+        <label class="form-label" for="host">Host</label>
+        <input class="form-control" id="host" type="text" @bind-value="model.Settings.Email.Host" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="port">Port</label>
+        <input class="form-control" id="port" type="number" @bind-value="model.Settings.Email.Port" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-control" id="email" type="email" @bind-value="model.Settings.Email.Email" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="pwd">Password</label>
+        <input class="form-control" id="pwe" type="password" @bind-value="model.Settings.Email.Password" />
+      </div>
+    }
+  </div>
+  <button class="btn btn-success" type="submit" style="width:100%">Guardar Configuración</button>
+</EditForm>
+
+@code {
+
+  private bool sef = false;
+  protected override void OnInitialized()
+  {
+    
+  }
+  private void showEmailForm()
+  {
+    sef = !sef;
+  }
+  private void salvarConfiguraciones()
+  {
+    model.SaveSettings();
+    navman.NavigateTo("/");
+  }
+}

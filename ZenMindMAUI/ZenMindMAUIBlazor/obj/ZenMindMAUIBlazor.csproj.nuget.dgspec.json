@@ -66,6 +66,10 @@
         "net8.0-android34.0": {
           "targetAlias": "net8.0-android",
           "dependencies": {
+            "BlazorScheduler": {
+              "target": "Package",
+              "version": "[4.3.3, )"
+            },
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
               "version": "[8.0.90, )"
@@ -91,6 +95,10 @@
               "target": "Package",
               "version": "[8.0.8, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -121,6 +129,10 @@
         "net8.0-ios17.5": {
           "targetAlias": "net8.0-ios",
           "dependencies": {
+            "BlazorScheduler": {
+              "target": "Package",
+              "version": "[4.3.3, )"
+            },
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
               "version": "[8.0.90, )"
@@ -146,6 +158,10 @@
               "target": "Package",
               "version": "[8.0.8, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -176,6 +192,10 @@
         "net8.0-maccatalyst17.5": {
           "targetAlias": "net8.0-maccatalyst",
           "dependencies": {
+            "BlazorScheduler": {
+              "target": "Package",
+              "version": "[4.3.3, )"
+            },
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
               "version": "[8.0.90, )"
@@ -201,6 +221,10 @@
               "target": "Package",
               "version": "[8.0.8, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -232,6 +256,10 @@
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "dependencies": {
+            "BlazorScheduler": {
+              "target": "Package",
+              "version": "[4.3.3, )"
+            },
             "Microsoft.AspNetCore.Components.WebView.Maui": {
               "target": "Package",
               "version": "[8.0.90, )"
@@ -251,6 +279,10 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.90, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
