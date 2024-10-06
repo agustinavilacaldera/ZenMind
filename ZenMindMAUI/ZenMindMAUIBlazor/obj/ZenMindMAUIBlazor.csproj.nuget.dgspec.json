@@ -100,6 +100,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.10.0, )"
+            },
             "sqlite-net-pcl": {
               "target": "Package",
               "version": "[1.9.172, )"
@@ -162,6 +166,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.10.0, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -226,6 +234,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.10.0, )"
+            },
             "sqlite-net-pcl": {
               "target": "Package",
               "version": "[1.9.172, )"
@@ -283,6 +295,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.10.0, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

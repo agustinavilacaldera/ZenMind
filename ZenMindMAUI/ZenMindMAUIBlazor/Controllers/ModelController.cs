@@ -3,8 +3,10 @@ using Newtonsoft.Json;
 using SQLite;
 using System.Net.Mail;
 using System.Net;
-using System.Security.Cryptography;
-using ZenMindMAUIBlazor.Models;
+using ZenMindMAUIBlazor.Models.Config;
+using ZenMindMAUIBlazor.Models.Miselanea;
+using ZenMindMAUIBlazor.Models.Data;
+using ZenMindMAUIBlazor.Models.Report;
 
 
 namespace ZenMindMAUIBlazor.Controllers;
@@ -17,6 +19,14 @@ internal class ModelController
   public string Message { get; set; }
   private SQLiteConnection connection;
 
+  public ReportePaciente CargarReportePaciente(int pId)
+  {
+    return new ReportePaciente()
+    {
+      Pacientes = CargarPaciente(pId),
+      TestAssignments = ListarTestAssignmentPorPaciente(pId)
+    };
+  }
   private void enviarCorreo(string toEmail, string subject, string body)
   {
     //string StatusMessage = string.Empty;
@@ -162,6 +172,16 @@ internal class ModelController
     {
       return (from x in connection.Table<TestAssignments>()
               where x.PacientesId == pId
+              select x).ToList();
+    }
+    catch { return null; }
+  }
+  public List<TestAssignments> ListarTestAssignmentRespondidosPorPaciente(int pId)
+  {
+    try
+    {
+      return (from x in connection.Table<TestAssignments>()
+              where x.PacientesId == pId && x.Respondido
               select x).ToList();
     }
     catch { return null; }

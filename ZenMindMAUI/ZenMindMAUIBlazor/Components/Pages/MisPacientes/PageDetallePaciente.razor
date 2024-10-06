@@ -1,10 +1,13 @@
 ﻿@page "/detallePaciente/{PacienteId:int}"
 @inject Controllers.ModelController model
+@using QuestPDF.Companion
+@using QuestPDF.Previewer
 
 <TituloPagina Titulo="Detalle Pacientes" href="/misPacientes" />
 <br />
 @paciente.SurName @paciente.Name
 <br />
+<button class="btn btn-success" @onclick="verReporte">Ver Reporte</button>
 <ListaTestAsignacionesPorPaciente PacienteId="paciente.Id" />
 
 @code {
@@ -14,5 +17,22 @@
   protected override void OnInitialized()
   {
     paciente = model.CargarPaciente(PacienteId);
+  }
+  private void verReporte()
+  {
+    QuestPDF.Settings.License = LicenseType.Community;
+    //ReportePaciente reportePaciente = model.CargarReportePaciente(PacienteId);
+    ReportePacienteDocument rpc = new ReportePacienteDocument(model).SetPaciente(PacienteId);//(model).SetPaciente(PacienteId);
+    rpc.GeneratePdfAndShow();
+    /*var rpc = Document.Create(container =>
+    {
+      container.Page(Page =>
+      {
+
+      });
+    });
+    rpc.GeneratePdf("e:\\users\\agust\\downloads\\test.pdf");
+    //rpc.ShowInPreviewer();*/
+    //rpc.ShowInCompanion(12500);
   }
 }
