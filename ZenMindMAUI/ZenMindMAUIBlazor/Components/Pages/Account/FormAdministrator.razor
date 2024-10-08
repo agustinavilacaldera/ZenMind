@@ -2,7 +2,7 @@
 @inject Controllers.ModelController model;
 @inject NavigationManager navman
 
-<h3>Actualizar Administrador</h3>
+<TituloPagina Titulo="Actualizar Administrador" href="/listaUsuarios"/>
 
 <EditForm Model="persona" OnSubmit="botonGuardar">
   <div class="mb-3">
@@ -28,9 +28,6 @@
   <div class="row">
     <div class="col">
       <button class="btn btn-primary" type="submit" style="width:100%">Guardar</button>
-    </div>
-    <div class="col">
-      <button type="button" class="btn btn-danger" style="width:100%" @onclick="botonCancelar">Cancelar</button>
     </div>
   </div>
 

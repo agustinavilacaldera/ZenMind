@@ -6,7 +6,7 @@
 
 <EditForm Model="model.Settings" OnSubmit="salvarConfiguraciones">
   <div class="list-group">
-    <button class="list-group-item list-group-item-action color-r1" @onclick="showEmailForm">Email</button>
+    <button type="button" class="list-group-item list-group-item-action color-r1" @onclick="showEmailForm">Email</button>
     @if (sef)
     {
       <div class="mb-3">

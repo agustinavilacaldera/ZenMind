@@ -16,7 +16,9 @@
   private Pacientes paciente;
   private string color="";
   [Parameter]
-  public EventCallback<int> SelectedItem{ get; set; }
+  public EventCallback<int> SelectedPaciente{ get; set; }
+  [Parameter]
+  public EventCallback SelectedItem{ get; set; }
 
   protected override void OnInitialized()
   {
@@ -25,7 +27,8 @@
   }
   private void botonPaciente()
   {
-    SelectedItem.InvokeAsync(PacienteId);
+    SelectedPaciente.InvokeAsync(PacienteId);
+    SelectedItem.InvokeAsync();
   }
 
 

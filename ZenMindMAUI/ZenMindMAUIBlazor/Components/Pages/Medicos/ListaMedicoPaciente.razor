@@ -10,7 +10,7 @@
     </div>
     @foreach (MedicoPaciente mp in listaMedicoPacientes)
     {
-      <ItemPaciente PacienteId="@mp.PacientesId" SelectedItem="botonSelectItem" />
+      <ItemPaciente PacienteId="@mp.PacientesId" SelectedItem="()=>botonSelectItem(mp.Id)" SelectedPaciente="selectPaciente" />
     }
   </div>
 
@@ -22,13 +22,23 @@
   private List<MedicoPaciente> listaMedicoPacientes;
   [Parameter]
   public EventCallback<int> SelectedItem { get; set; }
+  [Parameter]
+  public EventCallback<int> SelectedPaciente { get; set; }
   protected override void OnInitialized()
   {
     listaMedicoPacientes = model.ListarMedicoPacientes(MedicoId);
   }
-  private void botonSelectItem(int pId)
+  private void botonSelectItem(int mpId)
   {
-    SelectedItem.InvokeAsync(pId);
+    SelectedItem.InvokeAsync(mpId);
+  }
+  private void selectPaciente(int pId)
+  {
+    SelectedPaciente.InvokeAsync(pId);
+  }
+  public void Refresh()
+  {
+    listaMedicoPacientes = model.ListarMedicoPacientes(MedicoId);
+    StateHasChanged();
   }
 }
-ListaMedicoPaciente.razor

@@ -2,7 +2,8 @@
 @inject Controllers.ModelController model;
 @inject NavigationManager navman;
 
-<h3>Actualizar Usuario</h3>
+<TituloPagina Titulo="Actualizar Usuario" href="/listaUsuarios" />
+
 <EditForm Model="users" OnSubmit="botonGuardar">
   <div class="mb-3">
     <label for="usr" class="form-label">Nombre Usuario</label>
@@ -12,7 +13,10 @@
     <label for="pwd" class="form-label">Contraseña</label>
     <input id="pwd" class="form-control" type="password" @bind="@users.Password" />
   </div>
-  <button class="btn btn-primary" type="submit">Guardar</button>
+  <div class="mb-3">
+    <button style="width: 100%" class="btn btn-success" type="submit">Guardar</button>
+  </div>
+  
 </EditForm>
 
 @code {

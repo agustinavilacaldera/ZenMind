@@ -1,9 +1,10 @@
-﻿<div class="row">
+﻿@inject NavigationManager navman
+<div class="row">
   <div class="col-9">
     <h3>@Titulo</h3>
   </div>
   <div class="col-3">
-    <a class="btn btn-danger" href="@href" style="width:100%">Regresar</a>
+    <button @onclick="botonClick" class="btn btn-danger" style="width:100%">Regresar</button>
   </div>
 </div>
 
@@ -13,4 +14,13 @@
   public string Titulo{get;set;}
   [Parameter]
   public string href{ get; set; }
+  [Parameter]
+  public EventCallback OnClick{ get; set; }
+  private void botonClick()
+  {
+    if(href!=null)
+      navman.NavigateTo(href);
+    OnClick.InvokeAsync();
+    
+  }
 }

@@ -1,30 +1,30 @@
 ﻿using Microsoft.Extensions.Logging;
 using ZenMindMAUIBlazor.Controllers;
 
-namespace ZenMindMAUIBlazor;
-
-public static class MauiProgram
+namespace ZenMindMAUIBlazor
 {
-  public static MauiApp CreateMauiApp()
+  public static class MauiProgram
   {
-    var builder = MauiApp.CreateBuilder();
-    builder
-      .UseMauiApp<App>()
-      .ConfigureFonts(fonts =>
-      {
-        fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-      });
+    public static MauiApp CreateMauiApp()
+    {
+      var builder = MauiApp.CreateBuilder();
+      builder
+        .UseMauiApp<App>()
+        .ConfigureFonts(fonts =>
+        {
+          fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+        });
 
-    builder.Services.AddSingleton<ModelController>();
+      builder.Services.AddSingleton<ModelController>();
 
-    builder.Services.AddMauiBlazorWebView();
+      builder.Services.AddMauiBlazorWebView();
 
 #if DEBUG
   		builder.Services.AddBlazorWebViewDeveloperTools();
   		builder.Logging.AddDebug();
 #endif
 
-    return builder.Build();
+      return builder.Build();
+    }
   }
 }
-

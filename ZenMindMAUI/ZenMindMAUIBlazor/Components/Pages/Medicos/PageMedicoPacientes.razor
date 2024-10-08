@@ -1,8 +1,8 @@
 ﻿@page "/listaPacientes/{MedicoId:int}"
 @inject Controllers.ModelController model
 
-<TituloPagina Titulo="Lista Pacientes" href="/asignacionPacientes"/>
-
+<TituloPagina Titulo="Lista Pacientes" href="/asignacionPacientes" />
+<br />
 @if (medico != null)
 {
   <div class="mb-3">
@@ -10,15 +10,10 @@
     <input type="email" class="form-control" id="nombreMedico" readonly @bind="nombreMedico">
   </div>
 }
-
-<div class="row">
-  <div class="col">
-    <button class="btn btn-primary" style="width:100%" @onclick="botonAgregarPaciente">Agregar Paciente</button>
-  </div>
+<div class="mb-3">
+  <button class="btn btn-primary" style="width:100%" @onclick="botonAgregarPaciente">Agregar Paciente</button>
 </div>
-
-<ListaMedicoPaciente MedicoId="MedicoId" SelectedItem="selectedItem" />
-
+<ListaMedicoPaciente @ref="listaMedicoPaciente" MedicoId="MedicoId" SelectedItem="selectedItem" />
 
 @if (showSelect)
 {
@@ -36,8 +31,9 @@
   private Medicos medico;
   private bool showSelect = false;
   private bool showRemover = false;
-  private string mensaje="";
+  private string mensaje = "";
   private string nombreMedico;
+  private ListaMedicoPaciente listaMedicoPaciente;
 
   protected override void OnInitialized()
   {
@@ -66,7 +62,8 @@
   }
   private void refreshList()
   {
-    StateHasChanged();
+    //StateHasChanged();
+    listaMedicoPaciente.Refresh();
   }
   private void botonSelectItem(MedicoPaciente mp)
   {
@@ -77,18 +74,19 @@
   }
   private void selectedItem(int mpId)
   {
-    MedicoPaciente mp = model.CargarMedicoPaciente(mpId);
-    Pacientes pacientes = model.CargarPaciente(mp.PacientesId);
+    medicoPaciente = model.CargarMedicoPaciente(mpId);
+    Pacientes pacientes = model.CargarPaciente(medicoPaciente.PacientesId);
     mensaje = "Desea desvincular a " + pacientes.SurName + " " + pacientes.Name;
     showRemover = true;
   }
   private void seleccionarPaciente(int pId)
   {
     MedicoPaciente medicoPaciente = new()
-    {
-      MedicosId=MedicoId,
-      PacientesId=pId
-    };
+      {
+        MedicosId = MedicoId,
+        PacientesId = pId
+      };
     model.ActualizarMedicoPaciente(medicoPaciente);
+    refreshList();
   }
 }

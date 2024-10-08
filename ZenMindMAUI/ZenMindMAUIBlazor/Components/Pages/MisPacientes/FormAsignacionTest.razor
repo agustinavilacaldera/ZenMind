@@ -3,7 +3,7 @@
 @inject Controllers.ModelController model
 
 <TituloPagina Titulo="Edicion Asignacion de Test" href="asignarTest" />
-
+<br />
 <EditForm Model="testAssignments" OnSubmit="actualizarTestAssignment">
   <div class="input-group mb-3">
     <input type="text" class="form-control" placeholder="Paciente" aria-label="Paciente" aria-describedby="button-addon2" readonly @bind="nombrePaciente" />
@@ -54,14 +54,15 @@
       testAssignments = new();
       tests = new();
     }
-    
+
     testAssignments.MedicosId = medicos.Id;
   }
   private void actualizarTestAssignment()
   {
     testAssignments.PacientesId = pacientes.Id;
     testAssignments.TestId = tests.Id;
-    model.ActualizarTestAssignment(testAssignments);
+    testAssignments= model.ActualizarTestAssignment(testAssignments);
+    model.notificarAlPaciente(testAssignments);
     navman.NavigateTo("asignarTest");
   }
   private void selectPaciente()

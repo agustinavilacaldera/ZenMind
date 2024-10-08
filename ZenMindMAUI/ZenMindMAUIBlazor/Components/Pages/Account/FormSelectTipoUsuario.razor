@@ -1,24 +1,19 @@
 ﻿@page "/selectTipoUsuario"
 @inject NavigationManager navman
 
-<h3>Seleccionar tipo de usuario</h3>
-
-<EditForm Model="user" OnSubmit="botonContinuar" >
-  <div class="row">
-    <p>Selecionar el tipo de usuario:</p>
-  </div>
-  <div class="row">
-    <InputSelect class="form-select" style="width:100%" @bind-Value="tipoUsuario">
+<TituloPagina Titulo="Seleccionar Tipo de Usuario" href="/listaUsuarios" />
+<br />
+<EditForm Model="user" OnSubmit="botonContinuar">
+  <div class="mb-3">
+    <label for="tipousuario" class="form-label">Email address</label>
+    <InputSelect id="tipousuario" class="form-select" style="width:100%" @bind-Value="tipoUsuario">
       <option value="1">Administrativo</option>
       <option value="2">Médico</option>
       <option value="3">Paciente</option>
     </InputSelect>
   </div>
- 
+
   <div class="row">
-    <div class="col">
-      <a class="btn btn-danger" style="width:100%" href="/listaUsuarios">Atras</a>
-    </div>
     <div class="col">
       <button class="btn btn-success" style="width:100%">Continuar</button>
     </div>
@@ -28,7 +23,7 @@
 
 
 @code {
-  string tipoUsuario="1";
+  string tipoUsuario = "1";
   private Users user = new();
 
   private void botonContinuar()

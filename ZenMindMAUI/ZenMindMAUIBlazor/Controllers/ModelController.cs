@@ -4,7 +4,7 @@ using SQLite;
 using System.Net.Mail;
 using System.Net;
 using ZenMindMAUIBlazor.Models.Config;
-using ZenMindMAUIBlazor.Models.Miselanea;
+using ZenMindMAUIBlazor.Models.Miscelanea;
 using ZenMindMAUIBlazor.Models.Data;
 using ZenMindMAUIBlazor.Models.Report;
 
@@ -48,6 +48,7 @@ internal class ModelController
         {
           smtp.Credentials = new NetworkCredential(email, pwd);
           smtp.EnableSsl = true;
+          
           smtp.Send(mail);
         }
       }
@@ -69,6 +70,17 @@ internal class ModelController
       Pacientes p = CargarPaciente(ta.PacientesId);
       enviarCorreo(CargarMedico(ta.MedicosId).Email,"Paciente en Rojo", $"El paciente {p.SurName} {p.Name} ha obtenido una muy mala valoración");
     }
+  }
+  public void notificarAlPaciente(TestAssignments ta)
+  {
+    Pacientes p = CargarPaciente(ta.PacientesId);
+    Medicos m = CargarMedico(ta.MedicosId);
+    //ta = CargarTestAssignment(ta.Id);
+    //if (ta.ObtenerCalificacion() <= 1)
+    //{
+    //  Pacientes p = CargarPaciente(ta.PacientesId);
+      enviarCorreo(p.Email, "Nuevo Test", $"El Dr {m.SurName} {m.Name} le ha asignado un nuevo test para el día {ta.Date.ToShortDateString()}");
+    //}
   }
   public void LoadSettings()
   {

@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZenMindMAUIBlazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+b417b78cd0a4f5e3a50d3f756215747ee776a670")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+677f55809e6e649cf8459a70dba3705e566d4135")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZenMindMAUIBlazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZenMindMAUIBlazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

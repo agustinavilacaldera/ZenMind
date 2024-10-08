@@ -2,7 +2,7 @@
 @inject Controllers.ModelController model
 @inject NavigationManager navman
 
-<h3>Actualizar Médico</h3>
+<TituloPagina Titulo="Actualizar Medico" href="/listaUsuarios" />
 
 <EditForm Model="persona" OnSubmit="botonGuardar">
   <div class="mb-3">
@@ -29,22 +29,15 @@
     <label class="form-label" for="birthday">Fecha Nacimiento</label>
     <input class="form-control" id="birthday" type="date" @bind-value="persona.Birthday" />
   </div>
-  <div class="row">
-    <div class="col">
-      <button class="btn btn-primary" type="submit" style="width:100%">Guardar</button>
-    </div>
-    <div class="col">
-      <button type="button" class="btn btn-danger" style="width:100%" @onclick="botonCancelar">Cancelar</button>
-    </div>
+  <div class="mb-3">
+    <button class="btn btn-primary" type="submit" style="width:100%">Guardar</button>
   </div>
-
-
 </EditForm>
 
 @code {
   [Parameter]
-  public string userName{ get; set; }
-  private Medicos persona=new();
+  public string userName { get; set; }
+  private Medicos persona = new();
   protected override void OnInitialized()
   {
     persona = model.CargarMedicoPorUserId(userName);
@@ -57,9 +50,6 @@
     model.ActualizarMedico(persona);
     navman.NavigateTo("/listaUsuarios");
   }
-  private void botonCancelar()
-  {
-    navman.NavigateTo("/listaUsuarios");
-  }
+
 
 }
