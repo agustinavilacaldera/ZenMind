@@ -3,7 +3,6 @@ using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 using ZenMindMAUIBlazor.Controllers;
 using ZenMindMAUIBlazor.Models.Data;
-using ZenMindMAUIBlazor.Models.Report;
 using Colors = QuestPDF.Helpers.Colors;
 
 

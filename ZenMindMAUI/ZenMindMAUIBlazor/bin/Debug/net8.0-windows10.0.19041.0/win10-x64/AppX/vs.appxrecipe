@@ -30,25 +30,25 @@
     <AppXManifest Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-10-08T23:33:02.150</Modified>
+      <Modified>2024-10-11T01:18:20.381</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-10-08T23:33:01.543</Modified>
+      <Modified>2024-10-11T00:49:25.819</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ZenMindMAUIBlazor.runtimeconfig.json">
       <PackagePath>ZenMindMAUIBlazor.runtimeconfig.json</PackagePath>
-      <Modified>2024-10-08T03:21:57.688</Modified>
+      <Modified>2024-10-11T00:49:25.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ZenMindMAUIBlazor.dll">
       <PackagePath>ZenMindMAUIBlazor.dll</PackagePath>
-      <Modified>2024-10-08T23:32:57.241</Modified>
+      <Modified>2024-10-11T01:18:18.623</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>ZenMindMAUIBlazor.exe</PackagePath>
-      <Modified>2024-10-08T23:32:57.890</Modified>
+      <Modified>2024-10-11T01:18:18.937</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -380,15 +380,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ZenMindMAUIBlazor.deps.json">
       <PackagePath>ZenMindMAUIBlazor.deps.json</PackagePath>
-      <Modified>2024-10-08T23:33:00.711</Modified>
+      <Modified>2024-10-11T00:49:25.160</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
+    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.44\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
-      <Modified>2024-07-08T09:23:38.000</Modified>
+      <Modified>2024-09-09T00:48:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\WinRT.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.44\lib\net8.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
-      <Modified>2024-07-08T09:23:38.000</Modified>
+      <Modified>2024-09-09T00:48:40.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\blazorscheduler\4.3.3\lib\net6.0\BlazorScheduler.dll">
       <PackagePath>BlazorScheduler.dll</PackagePath>

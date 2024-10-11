@@ -286,10 +286,10 @@
     <AppxPackagedFile Include="E:\Users\agust\Documents\GitHub\ZenMind\ZenMindMAUI\ZenMindMAUIBlazor\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\ZenMindMAUIBlazor.deps.json">
       <PackagePath>ZenMindMAUIBlazor.deps.json</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
+    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.44\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\WinRT.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.44\lib\net8.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\agust\.nuget\packages\blazorscheduler\4.3.3\lib\net6.0\BlazorScheduler.dll">

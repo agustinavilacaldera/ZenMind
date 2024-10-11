@@ -6,7 +6,6 @@ using System.Net;
 using ZenMindMAUIBlazor.Models.Config;
 using ZenMindMAUIBlazor.Models.Miscelanea;
 using ZenMindMAUIBlazor.Models.Data;
-using ZenMindMAUIBlazor.Models.Report;
 
 
 namespace ZenMindMAUIBlazor.Controllers;
@@ -19,20 +18,11 @@ internal class ModelController
   public string Message { get; set; }
   private SQLiteConnection connection;
 
-  public ReportePaciente CargarReportePaciente(int pId)
-  {
-    return new ReportePaciente()
-    {
-      Pacientes = CargarPaciente(pId),
-      TestAssignments = ListarTestAssignmentPorPaciente(pId)
-    };
-  }
   private void enviarCorreo(string toEmail, string subject, string body)
   {
-    //string StatusMessage = string.Empty;
     string email = this.Settings.Email.Email;
     string host = this.Settings.Email.Host;
-    int port=this.Settings.Email.Port;
+    int port = this.Settings.Email.Port;
     string pwd = this.Settings.Email.Password;
     try
     {
@@ -48,7 +38,7 @@ internal class ModelController
         {
           smtp.Credentials = new NetworkCredential(email, pwd);
           smtp.EnableSsl = true;
-          
+
           smtp.Send(mail);
         }
       }
@@ -68,26 +58,22 @@ internal class ModelController
     if (ta.ObtenerCalificacion() <= 1)
     {
       Pacientes p = CargarPaciente(ta.PacientesId);
-      enviarCorreo(CargarMedico(ta.MedicosId).Email,"Paciente en Rojo", $"El paciente {p.SurName} {p.Name} ha obtenido una muy mala valoración");
+      enviarCorreo(CargarMedico(ta.MedicosId).Email, "Paciente en Rojo", $"El paciente {p.SurName} {p.Name} ha obtenido una muy mala valoración");
     }
   }
   public void notificarAlPaciente(TestAssignments ta)
   {
     Pacientes p = CargarPaciente(ta.PacientesId);
     Medicos m = CargarMedico(ta.MedicosId);
-    //ta = CargarTestAssignment(ta.Id);
-    //if (ta.ObtenerCalificacion() <= 1)
-    //{
-    //  Pacientes p = CargarPaciente(ta.PacientesId);
-      enviarCorreo(p.Email, "Nuevo Test", $"El Dr {m.SurName} {m.Name} le ha asignado un nuevo test para el día {ta.Date.ToShortDateString()}");
-    //}
+
+    enviarCorreo(p.Email, "Nuevo Test", $"El Dr {m.SurName} {m.Name} le ha asignado un nuevo test para el día {ta.Date.ToShortDateString()}");
+
   }
   public void LoadSettings()
   {
     try
     {
       LoadSettingFromFile();
-      //apiController = new(Configuraciones.ApiServer);
     }
     catch (Exception)
     {
@@ -97,7 +83,6 @@ internal class ModelController
   }
   private void LoadSettingFromFile()
   {
-    //string dir = Directory.GetCurrentDirectory();
 
     string f = Ruta + "\\Configuraciones.json";
     string r = "";
@@ -247,7 +232,7 @@ internal class ModelController
     {
       ta.Id = nextTestAssignment();
       connection.InsertOrReplace(ta);
-      enviarCorreo(CargarPaciente(ta.PacientesId).Email,"Nuevo test para responder", $"Se le a asignado un nuevo test para el día {ta.Date.ToShortDateString()}");
+      enviarCorreo(CargarPaciente(ta.PacientesId).Email, "Nuevo test para responder", $"Se le a asignado un nuevo test para el día {ta.Date.ToShortDateString()}");
     }
     return ta;
   }
@@ -783,7 +768,7 @@ internal class ModelController
   public ModelController()
   {
     Ruta = AppDomain.CurrentDomain.BaseDirectory;
-    
+
     LoadSettings();
     initDatabase();
   }

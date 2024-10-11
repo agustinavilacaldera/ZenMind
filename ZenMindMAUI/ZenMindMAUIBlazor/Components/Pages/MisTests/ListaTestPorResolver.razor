@@ -20,24 +20,7 @@
     }
   </Appointments>
 </Scheduler>
-@*
-@if (listaTestAssignment != null)
-{
-  <div class="list-group">
-    <div class="list-group-item">
-      <div class="row">
-        <div class="col-2">Id</div>
-        <div class="col-2">Fecha</div>
-        <div class="col-8">Título</div>
-      </div>
-    </div>
-  </div>
-  @foreach (TestAssignments testAssignments in listaTestAssignment)
-  {
-    <ItemMisTestAssignment TestAssignmentId="testAssignments.Id" SelectedTestAssignment="selectTestAssignment" />
-  }
 
-*@
 
 @code {
   [Parameter]
