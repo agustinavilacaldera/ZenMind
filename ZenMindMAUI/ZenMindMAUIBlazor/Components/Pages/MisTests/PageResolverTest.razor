@@ -34,7 +34,7 @@
     {
       testAssignments.Respondido = true;
       testAssignments=model.ActualizarTestAssignment(testAssignments);
-      model.notificarAlMedico(testAssignments);
+      //model.notificarAlMedico(testAssignments);
       navman.NavigateTo("/misTests");
     }
     else
@@ -46,7 +46,8 @@
       {
         Answer = r,
         QuestionsId = pregunta.Id,
-        TestAssignmentId = TestAssignmentId
+        TestAssignmentId = TestAssignmentId,
+        Fecha=DateTime.Today
       };
       model.ActualizarTestFillOut(tfo);
       siguientePregunta();

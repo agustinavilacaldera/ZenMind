@@ -18,57 +18,57 @@ internal class ModelController
   public string Message { get; set; }
   private SQLiteConnection connection;
 
-  private void enviarCorreo(string toEmail, string subject, string body)
-  {
-    string email = this.Settings.Email.Email;
-    string host = this.Settings.Email.Host;
-    int port = this.Settings.Email.Port;
-    string pwd = this.Settings.Email.Password;
-    try
-    {
-      using (MailMessage mail = new MailMessage())
-      {
-        mail.From = new MailAddress(email);
-        mail.To.Add(toEmail);
-        mail.Subject = subject;
-        mail.Body = body;
-        mail.IsBodyHtml = true;
+  //private void enviarCorreo(string toEmail, string subject, string body)
+  //{
+  //  string email = this.Settings.Email.Email;
+  //  string host = this.Settings.Email.Host;
+  //  int port = this.Settings.Email.Port;
+  //  string pwd = this.Settings.Email.Password;
+  //  try
+  //  {
+  //    using (MailMessage mail = new MailMessage())
+  //    {
+  //      mail.From = new MailAddress(email);
+  //      mail.To.Add(toEmail);
+  //      mail.Subject = subject;
+  //      mail.Body = body;
+  //      mail.IsBodyHtml = true;
 
-        using (SmtpClient smtp = new SmtpClient(host, port))
-        {
-          smtp.Credentials = new NetworkCredential(email, pwd);
-          smtp.EnableSsl = true;
+  //      using (SmtpClient smtp = new SmtpClient(host, port))
+  //      {
+  //        smtp.Credentials = new NetworkCredential(email, pwd);
+  //        smtp.EnableSsl = true;
 
-          smtp.Send(mail);
-        }
-      }
-    }
-    catch (SmtpException ex)
-    {
-      Message = $"SMTP error: {ex.Message}";
-    }
-    catch (Exception ex)
-    {
-      Message = $"Error while sending email: {ex.Message}";
-    }
-  }
-  public void notificarAlMedico(TestAssignments ta)
-  {
-    ta = CargarTestAssignment(ta.Id);
-    if (ta.ObtenerCalificacion() <= 1)
-    {
-      Pacientes p = CargarPaciente(ta.PacientesId);
-      enviarCorreo(CargarMedico(ta.MedicosId).Email, "Paciente en Rojo", $"El paciente {p.SurName} {p.Name} ha obtenido una muy mala valoración");
-    }
-  }
-  public void notificarAlPaciente(TestAssignments ta)
-  {
-    Pacientes p = CargarPaciente(ta.PacientesId);
-    Medicos m = CargarMedico(ta.MedicosId);
+  //        smtp.Send(mail);
+  //      }
+  //    }
+  //  }
+  //  catch (SmtpException ex)
+  //  {
+  //    Message = $"SMTP error: {ex.Message}";
+  //  }
+  //  catch (Exception ex)
+  //  {
+  //    Message = $"Error while sending email: {ex.Message}";
+  //  }
+  //}
+  //public void notificarAlMedico(TestAssignments ta)
+  //{
+  //  ta = CargarTestAssignment(ta.Id);
+  //  if (ta.ObtenerCalificacion() <= 1)
+  //  {
+  //    Pacientes p = CargarPaciente(ta.PacientesId);
+  //    enviarCorreo(CargarMedico(ta.MedicosId).Email, "Paciente en Rojo", $"El paciente {p.SurName} {p.Name} ha obtenido una muy mala valoración");
+  //  }
+  //}
+  //public void notificarAlPaciente(TestAssignments ta)
+  //{
+  //  Pacientes p = CargarPaciente(ta.PacientesId);
+  //  Medicos m = CargarMedico(ta.MedicosId);
 
-    enviarCorreo(p.Email, "Nuevo Test", $"El Dr {m.SurName} {m.Name} le ha asignado un nuevo test para el día {ta.Date.ToShortDateString()}");
+  //  enviarCorreo(p.Email, "Nuevo Test", $"El Dr {m.SurName} {m.Name} le ha asignado un nuevo test para el día {ta.Date.ToShortDateString()}");
 
-  }
+  //}
   public void LoadSettings()
   {
     try
@@ -232,7 +232,7 @@ internal class ModelController
     {
       ta.Id = nextTestAssignment();
       connection.InsertOrReplace(ta);
-      enviarCorreo(CargarPaciente(ta.PacientesId).Email, "Nuevo test para responder", $"Se le a asignado un nuevo test para el día {ta.Date.ToShortDateString()}");
+      //enviarCorreo(CargarPaciente(ta.PacientesId).Email, "Nuevo test para responder", $"Se le a asignado un nuevo test para el día {ta.Date.ToShortDateString()}");
     }
     return ta;
   }
@@ -465,6 +465,11 @@ internal class ModelController
   }
   public void BorrarTest(Tests t)
   {
+    List<Questions> lq = ListarQuestionPorTest(t.Id);
+    foreach (Questions q in lq)
+    {
+      BorrarQuestion(q);
+    }
     connection.Delete(t);
   }
   public Tests NuevoTest()

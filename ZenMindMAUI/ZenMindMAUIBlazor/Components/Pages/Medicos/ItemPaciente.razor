@@ -23,7 +23,7 @@
   protected override void OnInitialized()
   {
     paciente = model.CargarPaciente(PacienteId);
-    color = model.GetColor(paciente.ObtenerCalificacion());
+    color = model.GetColor(paciente.ObtenerCalificacionUltimoTest());
   }
   private void botonPaciente()
   {

@@ -62,7 +62,7 @@
     testAssignments.PacientesId = pacientes.Id;
     testAssignments.TestId = tests.Id;
     testAssignments= model.ActualizarTestAssignment(testAssignments);
-    model.notificarAlPaciente(testAssignments);
+    //model.notificarAlPaciente(testAssignments);
     navman.NavigateTo("asignarTest");
   }
   private void selectPaciente()
