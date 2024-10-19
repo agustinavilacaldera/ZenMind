@@ -28,10 +28,18 @@ namespace ZenMindMAUIBlazor.Models.Data
     }
     public float ObtenerCalificacionUltimoTest()
     {
-      DateTime d = TestFillOuts.Max(x => x.Fecha);
-      List<TestFillOuts> lasttest=TestFillOuts.Where(x=>x.Fecha==d).ToList();
-      ResultadoTest rt = new(lasttest);
-      return rt.ObtenerPonderado();
+      try
+      {
+        DateTime d = TestFillOuts.Max(x => x.Fecha);
+        List<TestFillOuts> lasttest = TestFillOuts.Where(x => x.Fecha == d).ToList();
+        ResultadoTest rt = new(lasttest);
+        return rt.ObtenerPonderado();
+      }
+      catch
+      {
+        return 1;
+      }
+      
     }
   }
 }
